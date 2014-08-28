@@ -15,13 +15,19 @@
 		6DA91DD6195C0C9900F2741A /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA91DD5195C0C9900F2741A /* BIDAppDelegate.m */; };
 		6DA91DD9195C0C9900F2741A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA91DD7195C0C9900F2741A /* Main_iPhone.storyboard */; };
 		6DA91DDC195C0C9900F2741A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA91DDA195C0C9900F2741A /* Main_iPad.storyboard */; };
-		6DA91DDF195C0C9900F2741A /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA91DDE195C0C9900F2741A /* BIDViewController.m */; };
+		6DA91DDF195C0C9900F2741A /* MKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA91DDE195C0C9900F2741A /* MKViewController.m */; };
 		6DA91DE1195C0C9900F2741A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DA91DE0195C0C9900F2741A /* Images.xcassets */; };
 		6DA91DE8195C0C9900F2741A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA91DE7195C0C9900F2741A /* XCTest.framework */; };
 		6DA91DE9195C0C9900F2741A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA91DC5195C0C9900F2741A /* Foundation.framework */; };
 		6DA91DEA195C0C9900F2741A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA91DC9195C0C9900F2741A /* UIKit.framework */; };
 		6DA91DF2195C0C9900F2741A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DA91DF0195C0C9900F2741A /* InfoPlist.strings */; };
 		6DA91DF4195C0C9900F2741A /* HotNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA91DF3195C0C9900F2741A /* HotNewsTests.m */; };
+		6DD241B319988AD300EECAA9 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 6DD241B219988AD300EECAA9 /* Icons */; };
+		6DD241B9199A130C00EECAA9 /* SingleSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD241B8199A130C00EECAA9 /* SingleSiteViewController.m */; };
+		6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD241BB199C557A00EECAA9 /* NewsDetailViewController.m */; };
+		6DD241BF199C5CFE00EECAA9 /* CNewsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */; };
+		6DD241C219A1D86200EECAA9 /* MKPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD241C119A1D86200EECAA9 /* MKPhotoCell.m */; };
+		6DD241C519A1D96200EECAA9 /* NewsTabViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD241C419A1D96200EECAA9 /* NewsTabViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +53,25 @@
 		6DA91DD5195C0C9900F2741A /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
 		6DA91DD8195C0C9900F2741A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		6DA91DDB195C0C9900F2741A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		6DA91DDD195C0C9900F2741A /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
-		6DA91DDE195C0C9900F2741A /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
+		6DA91DDD195C0C9900F2741A /* MKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKViewController.h; sourceTree = "<group>"; };
+		6DA91DDE195C0C9900F2741A /* MKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKViewController.m; sourceTree = "<group>"; };
 		6DA91DE0195C0C9900F2741A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6DA91DE6195C0C9900F2741A /* HotNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA91DE7195C0C9900F2741A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6DA91DEF195C0C9900F2741A /* HotNewsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HotNewsTests-Info.plist"; sourceTree = "<group>"; };
 		6DA91DF1195C0C9900F2741A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6DA91DF3195C0C9900F2741A /* HotNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotNewsTests.m; sourceTree = "<group>"; };
+		6DD241B219988AD300EECAA9 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
+		6DD241B7199A130C00EECAA9 /* SingleSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSiteViewController.h; sourceTree = "<group>"; };
+		6DD241B8199A130C00EECAA9 /* SingleSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleSiteViewController.m; sourceTree = "<group>"; };
+		6DD241BA199C557A00EECAA9 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		6DD241BB199C557A00EECAA9 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		6DD241BD199C5CFE00EECAA9 /* CNewsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNewsInfo.h; sourceTree = "<group>"; };
+		6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNewsInfo.m; sourceTree = "<group>"; };
+		6DD241C019A1D86200EECAA9 /* MKPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPhotoCell.h; sourceTree = "<group>"; };
+		6DD241C119A1D86200EECAA9 /* MKPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPhotoCell.m; sourceTree = "<group>"; };
+		6DD241C319A1D96200EECAA9 /* NewsTabViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTabViewCell.h; sourceTree = "<group>"; };
+		6DD241C419A1D96200EECAA9 /* NewsTabViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTabViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,14 +131,25 @@
 		6DA91DCB195C0C9900F2741A /* HotNews */ = {
 			isa = PBXGroup;
 			children = (
+				6DD241C019A1D86200EECAA9 /* MKPhotoCell.h */,
+				6DD241C119A1D86200EECAA9 /* MKPhotoCell.m */,
+				6DD241B219988AD300EECAA9 /* Icons */,
 				6DA91DD4195C0C9900F2741A /* BIDAppDelegate.h */,
 				6DA91DD5195C0C9900F2741A /* BIDAppDelegate.m */,
 				6DA91DD7195C0C9900F2741A /* Main_iPhone.storyboard */,
 				6DA91DDA195C0C9900F2741A /* Main_iPad.storyboard */,
-				6DA91DDD195C0C9900F2741A /* BIDViewController.h */,
-				6DA91DDE195C0C9900F2741A /* BIDViewController.m */,
+				6DA91DDD195C0C9900F2741A /* MKViewController.h */,
+				6DA91DDE195C0C9900F2741A /* MKViewController.m */,
 				6DA91DE0195C0C9900F2741A /* Images.xcassets */,
 				6DA91DCC195C0C9900F2741A /* Supporting Files */,
+				6DD241B7199A130C00EECAA9 /* SingleSiteViewController.h */,
+				6DD241B8199A130C00EECAA9 /* SingleSiteViewController.m */,
+				6DD241BA199C557A00EECAA9 /* NewsDetailViewController.h */,
+				6DD241BB199C557A00EECAA9 /* NewsDetailViewController.m */,
+				6DD241BD199C5CFE00EECAA9 /* CNewsInfo.h */,
+				6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */,
+				6DD241C319A1D96200EECAA9 /* NewsTabViewCell.h */,
+				6DD241C419A1D96200EECAA9 /* NewsTabViewCell.m */,
 			);
 			path = HotNews;
 			sourceTree = "<group>";
@@ -215,6 +243,7 @@
 			knownRegions = (
 				en,
 				Base,
+				English,
 			);
 			mainGroup = 6DA91DB9195C0C9900F2741A;
 			productRefGroup = 6DA91DC3195C0C9900F2741A /* Products */;
@@ -234,6 +263,7 @@
 			files = (
 				6DA91DDC195C0C9900F2741A /* Main_iPad.storyboard in Resources */,
 				6DA91DE1195C0C9900F2741A /* Images.xcassets in Resources */,
+				6DD241B319988AD300EECAA9 /* Icons in Resources */,
 				6DA91DD9195C0C9900F2741A /* Main_iPhone.storyboard in Resources */,
 				6DA91DD0195C0C9900F2741A /* InfoPlist.strings in Resources */,
 			);
@@ -255,8 +285,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DA91DD6195C0C9900F2741A /* BIDAppDelegate.m in Sources */,
-				6DA91DDF195C0C9900F2741A /* BIDViewController.m in Sources */,
+				6DA91DDF195C0C9900F2741A /* MKViewController.m in Sources */,
+				6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */,
+				6DD241B9199A130C00EECAA9 /* SingleSiteViewController.m in Sources */,
+				6DD241C219A1D86200EECAA9 /* MKPhotoCell.m in Sources */,
 				6DA91DD2195C0C9900F2741A /* main.m in Sources */,
+				6DD241C519A1D96200EECAA9 /* NewsTabViewCell.m in Sources */,
+				6DD241BF199C5CFE00EECAA9 /* CNewsInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +506,7 @@
 				6DA91DF9195C0C9900F2741A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DA91DFA195C0C9900F2741A /* Build configuration list for PBXNativeTarget "HotNewsTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +515,7 @@
 				6DA91DFC195C0C9900F2741A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
