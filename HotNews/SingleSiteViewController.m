@@ -12,18 +12,30 @@
 
 @implementation SingleSiteViewController
 @synthesize sectionData = _sectionData;
+
 -(NSMutableArray*)sectionData
 {
     if(_sectionData == nil)
     {
         _sectionData = [[NSMutableArray alloc] init];
-        CNewsInfo* news = [[CNewsInfo alloc] init];
-        news.title = @"imtitle1";
-        news.content = @"imcontent";
+        CNewsInfo* news1 = [[CNewsInfo alloc] init];
+        news1.title = @"cnBeta中文业界资讯站";
+        news1.content = @"imcontent";
+        news1.linkUrl = @"http://www.cnbeta.com";
+        
+        CNewsInfo* news2 = [[CNewsInfo alloc] init];
+        news2.title = @"CocoChina";
+        news2.content = @"imcontent";
+        news2.linkUrl = @"http://www.cocoachina.com";
+        
+        CNewsInfo* news3 = [[CNewsInfo alloc] init];
+        news3.title = @"今日头条";
+        news3.content = @"imcontent";
+        news3.linkUrl = @"http://www.toutiao.com";
     
-        [_sectionData addObject:news];
-        [_sectionData addObject:news];
-        [_sectionData addObject:news];
+        [_sectionData addObject:news1];
+        [_sectionData addObject:news2];
+        [_sectionData addObject:news3];
     }
     
     return _sectionData;
@@ -74,30 +86,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"ToDetailNews"])
-    {
-//        NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
-//        NSArray* model = (self.tableView == self.searchDisplayController.searchResultsTableView) ? self.filteredListData : self.sectionData;
-//        CBook* book = nil;
-//        if(indexPath == nil)
-//        {
-//            for (NSArray* arr in model) {
-//                for (CBook* item in arr) {
-//                    if([((BookTableViewCell*)sender).lblTag.text isEqualToString: item.bianhao])
-//                    {
-//                        book = item;
-//                        break;
-//                    }
-//                }
-//            }
-//        }else
-//        {
-//            book = model[indexPath.section][indexPath.row];
-//        }
-    
-//        NewsDetailViewController* controller = segue.destinationViewController;
-//        controller.bookInfo = book;
-    }
+    NSLog(@"identifier:", segue.identifier);
+//    if ([segue.identifier isEqualToString:@"ToDetailNews"]) {
+        NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
+        
+//        CNewsInfo* currentCell =
+        NewsDetailViewController* controller = segue.destinationViewController;
+        controller.newsInfo =  self.sectionData[indexPath.row];
+//    }
 }
 
 - (void)viewDidUnload
@@ -112,10 +108,10 @@
     return NO;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    //return [self.sectionData count];
-    return 1;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+//    //return [self.sectionData count];
+//    return 1;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

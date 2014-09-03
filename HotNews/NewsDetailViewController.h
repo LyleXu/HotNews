@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CNewsInfo.h"
 
 @interface NewsDetailViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIWebView* webView;
+@property (weak,nonatomic) CNewsInfo* newsInfo;
 @end

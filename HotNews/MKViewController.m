@@ -65,11 +65,6 @@
     self.photosCache = [NSMutableDictionary dictionary];
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    
-    return 1;
-}
-
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     NSIndexPath *selectedIndexPath = sender;

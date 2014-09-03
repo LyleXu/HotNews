@@ -11,4 +11,5 @@
 @interface CNewsInfo : NSObject
 @property(nonatomic,retain)NSString *title;
 @property(nonatomic,retain) NSString *content;
+@property(nonatomic,retain) NSString *linkUrl;
 @end
