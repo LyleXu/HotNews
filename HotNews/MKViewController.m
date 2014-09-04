@@ -10,6 +10,9 @@
 #import "MKPhotoCell.h"
 #import "SingleSiteViewController.h"
 #import "CNewsInfo.h"
+#import "SBJson.h"
+#import "SBJsonWriter.h"
+#import "DataLayer.h"
 
 @interface MKViewController ()
 @property (strong, nonatomic) NSArray *photosList;
@@ -20,11 +23,14 @@
 //Array of CNewsInfo
 + (NSMutableArray*) GetAllNews
 {
+//    NSMutableArray* allBooks = [DataLayer GetAllBooks:@"0" count:@""];
+    
+    
     NSMutableArray *NewsArray = [NSMutableArray array];
     
     CNewsInfo* news = [[CNewsInfo alloc] init];
     news.title = @"imtitle1";
-    news.content = @"imcontent";
+    news.description = @"imcontent";
     
     [NewsArray addObject:news];
     [NewsArray addObject:news];

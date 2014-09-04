@@ -9,6 +9,7 @@
 #import "SingleSiteViewController.h"
 #import "NewsDetailViewController.h"
 #import "NewsTabViewCell.h"
+#import "DataLayer.h"
 
 @implementation SingleSiteViewController
 @synthesize sectionData = _sectionData;
@@ -16,26 +17,8 @@
 -(NSMutableArray*)sectionData
 {
     if(_sectionData == nil)
-    {
-        _sectionData = [[NSMutableArray alloc] init];
-        CNewsInfo* news1 = [[CNewsInfo alloc] init];
-        news1.title = @"cnBeta中文业界资讯站";
-        news1.content = @"imcontent";
-        news1.linkUrl = @"http://www.cnbeta.com";
-        
-        CNewsInfo* news2 = [[CNewsInfo alloc] init];
-        news2.title = @"CocoChina";
-        news2.content = @"imcontent";
-        news2.linkUrl = @"http://www.cocoachina.com";
-        
-        CNewsInfo* news3 = [[CNewsInfo alloc] init];
-        news3.title = @"今日头条";
-        news3.content = @"imcontent";
-        news3.linkUrl = @"http://www.toutiao.com";
-    
-        [_sectionData addObject:news1];
-        [_sectionData addObject:news2];
-        [_sectionData addObject:news3];
+    { 
+        _sectionData =  [DataLayer GetAllNews:@"0"];
     }
     
     return _sectionData;
@@ -59,23 +42,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.iconName.text = [[self.iconPath lastPathComponent] stringByDeletingPathExtension];
-//    self.newsTitle.textLabel.text =[[self.iconPath lastPathComponent] stringByExpandingTildeInPath];
-//    //[self.newsTitle.textLabel.backgroundColor]
-//    //self.newsTitle.selectedBackgroundView = [[[UIView alloc] initWithFrame:self.newsTitle.frame] autorelease];
-//    self.newsTitle.textLabel.backgroundColor = [UIColor redColor];
-//    self.newsTitle.textLabel.highlightedTextColor = [UIColor blueColor];
-//    
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-//        
-//        UIImage *image = [UIImage imageWithContentsOfFile:self.iconPath];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            
-//            self.iconView.image = image;
-//        });
-//    });
-    
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -130,8 +96,10 @@
         cell=[[NewsTabViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
     }
     
-    NSArray* model = self.sectionData;
-    news = model[indexPath.row];
+//    NSArray* model = self.sectionData;
+//    news = model[indexPath.row];
+    NSUInteger row = [indexPath row];
+    news = [self.sectionData objectAtIndex:row];
     cell.lblTitle.text = news.title;
     
     return cell;

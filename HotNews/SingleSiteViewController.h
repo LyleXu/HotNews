@@ -10,10 +10,6 @@
 #import "CNewsInfo.h"
 
 @interface SingleSiteViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
-
 @property (strong, nonatomic) NSString *iconPath;
-//@property (weak, nonatomic) IBOutlet UITextView *iconName;
-//@property (weak, nonatomic) IBOutlet UITableViewCell *newsTitle;
-//@property (strong, nonatomic) IBOutlet UIImageView *iconView;
 @property (nonatomic,strong) NSMutableArray * sectionData;
 @end

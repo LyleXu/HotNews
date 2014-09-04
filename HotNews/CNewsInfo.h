@@ -10,6 +10,8 @@
 
 @interface CNewsInfo : NSObject
 @property(nonatomic,retain)NSString *title;
-@property(nonatomic,retain) NSString *content;
-@property(nonatomic,retain) NSString *linkUrl;
+@property(nonatomic,retain) NSString *description;
+@property(nonatomic,retain) NSString *link;
+
+-(void) Parse:(NSDictionary*) data;
 @end

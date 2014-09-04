@@ -23,7 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString: newsInfo.linkUrl];
+    NSURL *url = [NSURL URLWithString: newsInfo.link];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
 }
