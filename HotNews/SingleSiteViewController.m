@@ -52,14 +52,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"identifier:", segue.identifier);
-//    if ([segue.identifier isEqualToString:@"ToDetailNews"]) {
+    //NSLog(@"identifier:", segue.identifier);
+    if ([segue.identifier isEqualToString:@"ToDetailNews"]) {
         NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
         
 //        CNewsInfo* currentCell =
         NewsDetailViewController* controller = segue.destinationViewController;
         controller.newsInfo =  self.sectionData[indexPath.row];
-//    }
+   }
 }
 
 - (void)viewDidUnload
@@ -88,19 +88,19 @@
 {
     CNewsInfo* news =nil;
     NSString * tableIdentifier=@"NewsCell";
-    NewsTabViewCell *cell=[self.tableView dequeueReusableCellWithIdentifier:tableIdentifier];
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:tableIdentifier];
     
     if(cell==nil)
     {
         // first load
-        cell=[[NewsTabViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
+        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
     }
     
 //    NSArray* model = self.sectionData;
 //    news = model[indexPath.row];
     NSUInteger row = [indexPath row];
     news = [self.sectionData objectAtIndex:row];
-    cell.lblTitle.text = news.title;
+    cell.textLabel.text = news.title;
     
     return cell;
 }
