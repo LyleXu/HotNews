@@ -41,6 +41,7 @@
 		6DE0230519B6B6FB00889AD7 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE022F719B6B6FB00889AD7 /* SBJsonTokeniser.m */; };
 		6DE0230619B6B6FB00889AD7 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE022F919B6B6FB00889AD7 /* SBJsonUTF8Stream.m */; };
 		6DE0230719B6B6FB00889AD7 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE022FB19B6B6FB00889AD7 /* SBJsonWriter.m */; };
+		6DFBD53619C13C00005638A2 /* Image in Resources */ = {isa = PBXBuildFile; fileRef = 6DFBD53519C13C00005638A2 /* Image */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		6DE022FA19B6B6FB00889AD7 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = HotNews/SBJSON/SBJsonWriter.h; sourceTree = "<group>"; };
 		6DE022FB19B6B6FB00889AD7 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = HotNews/SBJSON/SBJsonWriter.m; sourceTree = "<group>"; };
 		6DE0230819B6B79E00889AD7 /* Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constraint.h; sourceTree = "<group>"; };
+		6DFBD53519C13C00005638A2 /* Image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Image; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,11 +175,12 @@
 		6DA91DCB195C0C9900F2741A /* HotNews */ = {
 			isa = PBXGroup;
 			children = (
-				6DE0230819B6B79E00889AD7 /* Constraint.h */,
+				6DFBD53519C13C00005638A2 /* Image */,
+				6DD241B219988AD300EECAA9 /* Icons */,
 				6DE022DD19B6B3A800889AD7 /* FromServer */,
 				6DD241C019A1D86200EECAA9 /* MKPhotoCell.h */,
 				6DD241C119A1D86200EECAA9 /* MKPhotoCell.m */,
-				6DD241B219988AD300EECAA9 /* Icons */,
+				6DE0230819B6B79E00889AD7 /* Constraint.h */,
 				6DA91DD4195C0C9900F2741A /* BIDAppDelegate.h */,
 				6DA91DD5195C0C9900F2741A /* BIDAppDelegate.m */,
 				6DA91DD7195C0C9900F2741A /* Main_iPhone.storyboard */,
@@ -354,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DFBD53619C13C00005638A2 /* Image in Resources */,
 				6DA91DDC195C0C9900F2741A /* Main_iPad.storyboard in Resources */,
 				6DA91DE1195C0C9900F2741A /* Images.xcassets in Resources */,
 				6DD241B319988AD300EECAA9 /* Icons in Resources */,

@@ -20,25 +20,6 @@
 @end
 
 @implementation MKViewController
-//Array of CNewsInfo
-+ (NSMutableArray*) GetAllNews
-{
-//    NSMutableArray* allBooks = [DataLayer GetAllBooks:@"0" count:@""];
-    
-    
-    NSMutableArray *NewsArray = [NSMutableArray array];
-    
-    CNewsInfo* news = [[CNewsInfo alloc] init];
-    news.title = @"imtitle1";
-    news.description = @"imcontent";
-    
-    [NewsArray addObject:news];
-    [NewsArray addObject:news];
-    [NewsArray addObject:news];
-
-    return [NewsArray copy];
-}
-
 -(NSString*) photosDirectory {
     return [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Icons"];
 }
@@ -51,7 +32,6 @@
     self.photosList = nil;
     self.photosCache = [NSMutableDictionary dictionary];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        
         [photosArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSString *path = [[self photosDirectory] stringByAppendingPathComponent:obj];
             CGSize size = [UIImage imageWithContentsOfFile:path].size;}];
