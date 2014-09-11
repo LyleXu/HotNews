@@ -24,9 +24,21 @@
     return [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Icons"];
 }
 
+-(NSString*) imageDirectory {
+    return [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Image"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Set background image
+    NSString *backgroundFilePath = [[self imageDirectory] stringByAppendingPathComponent:@"cloud.jpg"];
+    CGRect rect = [[self view] bounds];
+    UIImageView *backgroudView = [[UIImageView alloc] initWithFrame:rect];
+    [backgroudView setImage: [UIImage imageWithContentsOfFile:backgroundFilePath]];
+    self.collectionView.backgroundView = backgroudView;
+    
 	// Do any additional setup after loading the view, typically from a nib.
     NSArray * photosArray = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self photosDirectory] error:nil];
     self.photosList = nil;
