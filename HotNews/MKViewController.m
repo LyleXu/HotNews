@@ -15,7 +15,7 @@
 #import "DataLayer.h"
 
 @interface MKViewController ()
-@property (strong, nonatomic) NSArray *photosList;
+@property (strong, nonatomic) NSMutableArray *photosList;
 @property (strong, nonatomic) NSMutableDictionary *photosCache;
 @end
 
@@ -50,7 +50,8 @@
         
         dispatch_async(dispatch_get_current_queue(), ^{
             
-            self.photosList = photosArray;
+            self.photosList = [photosArray mutableCopy];
+            [self.photosList addObject:@"plus-sign.jpeg"];
             [self.collectionView reloadData];
         });
     });
@@ -83,7 +84,13 @@
     MKPhotoCell *cell = (MKPhotoCell*) [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSString *photoName = [self.photosList objectAtIndex:indexPath.row];
-    NSString *photoFilePath = [[self photosDirectory] stringByAppendingPathComponent:photoName];
+    NSString *photoFilePath = nil;
+    if (indexPath.row == self.photosList.count - 1) {
+        photoFilePath = [[self imageDirectory] stringByAppendingPathComponent:photoName];
+    }
+    else {
+        photoFilePath = [[self photosDirectory] stringByAppendingPathComponent:photoName];
+    }
     //cell.nameLabel.text =[photoName stringByDeletingPathExtension];
     
     __block UIImage* thumbImage = [self.photosCache objectForKey:photoName];
