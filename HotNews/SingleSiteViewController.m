@@ -29,7 +29,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -47,16 +46,13 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //NSLog(@"identifier:", segue.identifier);
     if ([segue.identifier isEqualToString:@"ToDetailNews"]) {
         NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
-        
-//        CNewsInfo* currentCell =
+
         NewsDetailViewController* controller = segue.destinationViewController;
         controller.newsInfo =  self.sectionData[indexPath.row];
    }
@@ -74,11 +70,6 @@
     return NO;
 }
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    //return [self.sectionData count];
-//    return 1;
-//}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.sectionData count];
@@ -92,12 +83,9 @@
     
     if(cell==nil)
     {
-        // first load
         cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
     }
     
-//    NSArray* model = self.sectionData;
-//    news = model[indexPath.row];
     NSUInteger row = [indexPath row];
     news = [self.sectionData objectAtIndex:row];
     cell.textLabel.text = news.title;

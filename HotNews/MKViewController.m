@@ -60,7 +60,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
     self.photosCache = [NSMutableDictionary dictionary];
 }
 
@@ -69,8 +68,10 @@
     NSIndexPath *selectedIndexPath = sender;
     NSString *iconName = [self.photosList objectAtIndex:selectedIndexPath.row];
     
-    SingleSiteViewController *controller = segue.destinationViewController;
-    controller.iconPath = [[self photosDirectory] stringByAppendingPathComponent:iconName];
+    if (selectedIndexPath.row != self.photosList.count - 1) {
+        SingleSiteViewController *controller = segue.destinationViewController;
+        controller.iconPath = [[self photosDirectory] stringByAppendingPathComponent:iconName];
+    }
 }
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -80,7 +81,6 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *CellIdentifier = @"MKPhotoCell";
-    
     MKPhotoCell *cell = (MKPhotoCell*) [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSString *photoName = [self.photosList objectAtIndex:indexPath.row];
@@ -128,6 +128,14 @@
 
 -(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self performSegueWithIdentifier:@"ToSingleNewsSite" sender:indexPath];
+    NSString* segueIdentifier = nil;
+    if (indexPath.row == self.photosList.count - 1) {
+        segueIdentifier = @"AddSubscript";
+    }
+    else {
+        segueIdentifier = @"ToSingleNewsSite";
+    }
+    
+    [self performSegueWithIdentifier:segueIdentifier sender:indexPath];
 }
 @end
