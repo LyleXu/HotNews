@@ -27,7 +27,6 @@
 		6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD241BB199C557A00EECAA9 /* NewsDetailViewController.m */; };
 		6DD241BF199C5CFE00EECAA9 /* CNewsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */; };
 		6DD241C219A1D86200EECAA9 /* MKPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD241C119A1D86200EECAA9 /* MKPhotoCell.m */; };
-		6DD241C519A1D96200EECAA9 /* NewsTabViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD241C419A1D96200EECAA9 /* NewsTabViewCell.m */; };
 		6DE022E019B6B4AD00889AD7 /* DataLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE022DF19B6B4AD00889AD7 /* DataLayer.m */; };
 		6DE022FC19B6B6FB00889AD7 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE022E419B6B6FB00889AD7 /* NSObject+SBJson.m */; };
 		6DE022FD19B6B6FB00889AD7 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE022E719B6B6FB00889AD7 /* SBJsonParser.m */; };
@@ -42,6 +41,7 @@
 		6DE0230619B6B6FB00889AD7 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE022F919B6B6FB00889AD7 /* SBJsonUTF8Stream.m */; };
 		6DE0230719B6B6FB00889AD7 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE022FB19B6B6FB00889AD7 /* SBJsonWriter.m */; };
 		6DFBD53619C13C00005638A2 /* Image in Resources */ = {isa = PBXBuildFile; fileRef = 6DFBD53519C13C00005638A2 /* Image */; };
+		6DFBD53919C6E058005638A2 /* ChannelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53819C6E058005638A2 /* ChannelsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +84,6 @@
 		6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNewsInfo.m; sourceTree = "<group>"; };
 		6DD241C019A1D86200EECAA9 /* MKPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPhotoCell.h; sourceTree = "<group>"; };
 		6DD241C119A1D86200EECAA9 /* MKPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPhotoCell.m; sourceTree = "<group>"; };
-		6DD241C319A1D96200EECAA9 /* NewsTabViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTabViewCell.h; sourceTree = "<group>"; };
-		6DD241C419A1D96200EECAA9 /* NewsTabViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTabViewCell.m; sourceTree = "<group>"; };
 		6DE022DE19B6B4AD00889AD7 /* DataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayer.h; sourceTree = "<group>"; };
 		6DE022DF19B6B4AD00889AD7 /* DataLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayer.m; sourceTree = "<group>"; };
 		6DE022E319B6B6FB00889AD7 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJson.h"; path = "HotNews/SBJSON/NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -115,6 +113,8 @@
 		6DE022FB19B6B6FB00889AD7 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = HotNews/SBJSON/SBJsonWriter.m; sourceTree = "<group>"; };
 		6DE0230819B6B79E00889AD7 /* Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constraint.h; sourceTree = "<group>"; };
 		6DFBD53519C13C00005638A2 /* Image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Image; sourceTree = "<group>"; };
+		6DFBD53719C6E058005638A2 /* ChannelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChannelsViewController.h; path = ../ChannelsViewController.h; sourceTree = "<group>"; };
+		6DFBD53819C6E058005638A2 /* ChannelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelsViewController.m; path = ../ChannelsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,12 +191,12 @@
 				6DA91DCC195C0C9900F2741A /* Supporting Files */,
 				6DD241B7199A130C00EECAA9 /* SingleSiteViewController.h */,
 				6DD241B8199A130C00EECAA9 /* SingleSiteViewController.m */,
+				6DFBD53719C6E058005638A2 /* ChannelsViewController.h */,
+				6DFBD53819C6E058005638A2 /* ChannelsViewController.m */,
 				6DD241BA199C557A00EECAA9 /* NewsDetailViewController.h */,
 				6DD241BB199C557A00EECAA9 /* NewsDetailViewController.m */,
 				6DD241BD199C5CFE00EECAA9 /* CNewsInfo.h */,
 				6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */,
-				6DD241C319A1D96200EECAA9 /* NewsTabViewCell.h */,
-				6DD241C419A1D96200EECAA9 /* NewsTabViewCell.m */,
 			);
 			path = HotNews;
 			sourceTree = "<group>";
@@ -395,9 +395,9 @@
 				6DE0230419B6B6FB00889AD7 /* SBJsonStreamWriterState.m in Sources */,
 				6DE022FD19B6B6FB00889AD7 /* SBJsonParser.m in Sources */,
 				6DE0230519B6B6FB00889AD7 /* SBJsonTokeniser.m in Sources */,
+				6DFBD53919C6E058005638A2 /* ChannelsViewController.m in Sources */,
 				6DD241C219A1D86200EECAA9 /* MKPhotoCell.m in Sources */,
 				6DA91DD2195C0C9900F2741A /* main.m in Sources */,
-				6DD241C519A1D96200EECAA9 /* NewsTabViewCell.m in Sources */,
 				6DD241BF199C5CFE00EECAA9 /* CNewsInfo.m in Sources */,
 				6DE022FF19B6B6FB00889AD7 /* SBJsonStreamParserAccumulator.m in Sources */,
 				6DE022FC19B6B6FB00889AD7 /* NSObject+SBJson.m in Sources */,

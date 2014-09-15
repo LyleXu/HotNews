@@ -129,7 +129,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yxd-yK-IfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-238" y="-359"/>
+            <point key="canvasLocation" x="-176" y="-729"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dE2-Qk-e94">
@@ -147,22 +147,22 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2M-0G-QoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-952" y="-359"/>
+            <point key="canvasLocation" x="-832" y="-729"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Channels View Controller-->
         <scene sceneID="7w8-UO-gSV">
             <objects>
-                <tableViewController id="a7l-zG-4nm" sceneMemberID="viewController">
+                <tableViewController id="a7l-zG-4nm" customClass="ChannelsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="15Q-aj-MG4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eiZ-8l-9Bu">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChannelCell" id="eiZ-8l-9Bu">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eiZ-8l-9Bu" id="aeg-yD-wUe">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
