@@ -42,6 +42,7 @@
 		6DE0230719B6B6FB00889AD7 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE022FB19B6B6FB00889AD7 /* SBJsonWriter.m */; };
 		6DFBD53619C13C00005638A2 /* Image in Resources */ = {isa = PBXBuildFile; fileRef = 6DFBD53519C13C00005638A2 /* Image */; };
 		6DFBD53919C6E058005638A2 /* ChannelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53819C6E058005638A2 /* ChannelsViewController.m */; };
+		6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,8 @@
 		6DFBD53519C13C00005638A2 /* Image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Image; sourceTree = "<group>"; };
 		6DFBD53719C6E058005638A2 /* ChannelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChannelsViewController.h; path = ../ChannelsViewController.h; sourceTree = "<group>"; };
 		6DFBD53819C6E058005638A2 /* ChannelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelsViewController.m; path = ../ChannelsViewController.m; sourceTree = "<group>"; };
+		6DFBD53A19C7C9BC005638A2 /* ChannelAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelAddViewController.h; sourceTree = "<group>"; };
+		6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelAddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,8 @@
 				6DD241BB199C557A00EECAA9 /* NewsDetailViewController.m */,
 				6DD241BD199C5CFE00EECAA9 /* CNewsInfo.h */,
 				6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */,
+				6DFBD53A19C7C9BC005638A2 /* ChannelAddViewController.h */,
+				6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */,
 			);
 			path = HotNews;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				6DE0230119B6B6FB00889AD7 /* SBJsonStreamParserState.m in Sources */,
 				6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */,
 				6DE0230719B6B6FB00889AD7 /* SBJsonWriter.m in Sources */,
+				6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */,
 				6DE022FE19B6B6FB00889AD7 /* SBJsonStreamParser.m in Sources */,
 				6DD241B9199A130C00EECAA9 /* SingleSiteViewController.m in Sources */,
 				6DE0230219B6B6FB00889AD7 /* SBJsonStreamWriter.m in Sources */,

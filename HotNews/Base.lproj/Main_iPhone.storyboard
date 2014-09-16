@@ -49,7 +49,9 @@
                             <outlet property="delegate" destination="eVm-WW-gyu" id="CJT-lV-xft"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="YNc-rc-xjn"/>
+                    <navigationItem key="navigationItem" id="YNc-rc-xjn">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="0qv-OT-lGh"/>
+                    </navigationItem>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
                         <segue destination="7NO-5C-BPX" kind="push" identifier="ToSingleNewsSite" id="1RN-Su-nac"/>
@@ -60,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="592" y="-729"/>
         </scene>
-        <!--Single Site View Controller - Title-->
+        <!--Single Site View Controller-->
         <scene sceneID="yia-ej-6ET">
             <objects>
                 <tableViewController id="7NO-5C-BPX" customClass="SingleSiteViewController" sceneMemberID="viewController">
@@ -87,7 +89,9 @@
                             <outlet property="delegate" destination="7NO-5C-BPX" id="uI2-s9-FLv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="20Q-4P-Z8W"/>
+                    <navigationItem key="navigationItem" id="20Q-4P-Z8W">
+                        <barButtonItem key="backBarButtonItem" title="Single Site" id="EnS-Qw-nN7"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hkN-Vy-0kt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +107,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                     </webView>
-                    <navigationItem key="navigationItem" id="MrB-Eb-GH9"/>
+                    <navigationItem key="navigationItem" id="MrB-Eb-GH9">
+                        <barButtonItem key="backBarButtonItem" title="SIte Detail" id="V5P-0d-Lm6"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="l6Q-iX-hkv" id="Fik-70-hmW"/>
                     </connections>
@@ -149,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="-832" y="-729"/>
         </scene>
-        <!--Channels View Controller-->
+        <!--Channels View Controller - Channels-->
         <scene sceneID="7w8-UO-gSV">
             <objects>
-                <tableViewController id="a7l-zG-4nm" customClass="ChannelsViewController" sceneMemberID="viewController">
+                <tableViewController title="Channels" id="a7l-zG-4nm" customClass="ChannelsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="15Q-aj-MG4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,6 +171,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="scR-f7-8WC" kind="push" identifier="ToSingleChannel" id="1b9-dw-ntO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -172,11 +181,44 @@
                             <outlet property="delegate" destination="a7l-zG-4nm" id="dbP-Dd-0gb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Efc-AI-pLQ"/>
+                    <navigationItem key="navigationItem" id="Efc-AI-pLQ">
+                        <barButtonItem key="backBarButtonItem" title="Channels" id="CP1-J9-S2Z"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJI-NS-os0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1333" y="-1037"/>
+        </scene>
+        <!--Channel Add View Controller - Add Site-->
+        <scene sceneID="ANd-3z-YkL">
+            <objects>
+                <tableViewController title="Add Site" id="scR-f7-8WC" customClass="ChannelAddViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CMJ-0v-eif">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nzo-MY-Ulh">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nzo-MY-Ulh" id="T5E-5S-P2n">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="scR-f7-8WC" id="7VB-bR-lOb"/>
+                            <outlet property="delegate" destination="scR-f7-8WC" id="GG6-UU-Jfi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Vjw-Zi-qd2">
+                        <barButtonItem key="backBarButtonItem" title="Add Site" id="zZt-Go-JxJ"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6IF-ex-otZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2123" y="-1037"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

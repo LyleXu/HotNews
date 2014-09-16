@@ -7,10 +7,10 @@
 //
 
 #import "ChannelsViewController.h"
+#import "ChannelAddViewController.h"
 
 @implementation ChannelsViewController
 @synthesize sectionData = _sectionData;
-//@synthesize allChannels = _allChannels;
 
 -(NSArray*)allChannels
 {
@@ -72,11 +72,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"ToDetailNews"]) {
+    if ([segue.identifier isEqualToString:@"ToSingleChannel"]) {
         NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
         
-//        NewsDetailViewController* controller = segue.destinationViewController;
-//        controller.newsInfo =  self.sectionData[indexPath.row];
+        ChannelAddViewController* controller = segue.destinationViewController;
+        //controller.sites =  self.sectionData[self.allChannels indexOfObject:indexPath.row];
+        NSString* channelName = [self.allChannels objectAtIndex:indexPath.row];
+        controller.sites = [self.sectionData objectForKey: channelName];
     }
 }
 
