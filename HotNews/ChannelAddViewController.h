@@ -10,4 +10,5 @@
 
 @interface ChannelAddViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSArray * sites;
+@property (nonatomic,strong) NSArray * allAddedSites;
 @end
