@@ -43,6 +43,7 @@
 		6DFBD53619C13C00005638A2 /* Image in Resources */ = {isa = PBXBuildFile; fileRef = 6DFBD53519C13C00005638A2 /* Image */; };
 		6DFBD53919C6E058005638A2 /* ChannelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53819C6E058005638A2 /* ChannelsViewController.m */; };
 		6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */; };
+		6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53E19C7D234005638A2 /* SiteAddCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		6DFBD53819C6E058005638A2 /* ChannelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelsViewController.m; path = ../ChannelsViewController.m; sourceTree = "<group>"; };
 		6DFBD53A19C7C9BC005638A2 /* ChannelAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelAddViewController.h; sourceTree = "<group>"; };
 		6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelAddViewController.m; sourceTree = "<group>"; };
+		6DFBD53D19C7D234005638A2 /* SiteAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteAddCell.h; sourceTree = "<group>"; };
+		6DFBD53E19C7D234005638A2 /* SiteAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteAddCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,8 @@
 				6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */,
 				6DFBD53A19C7C9BC005638A2 /* ChannelAddViewController.h */,
 				6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */,
+				6DFBD53D19C7D234005638A2 /* SiteAddCell.h */,
+				6DFBD53E19C7D234005638A2 /* SiteAddCell.m */,
 			);
 			path = HotNews;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				6DE0230019B6B6FB00889AD7 /* SBJsonStreamParserAdapter.m in Sources */,
 				6DE0230619B6B6FB00889AD7 /* SBJsonUTF8Stream.m in Sources */,
 				6DA91DDF195C0C9900F2741A /* MKViewController.m in Sources */,
+				6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */,
 				6DE0230119B6B6FB00889AD7 /* SBJsonStreamParserState.m in Sources */,
 				6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */,
 				6DE0230719B6B6FB00889AD7 /* SBJsonWriter.m in Sources */,

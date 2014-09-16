@@ -7,6 +7,7 @@
 //
 
 #import "ChannelAddViewController.h"
+#import "SiteAddCell.h"
 
 @implementation ChannelAddViewController
 
@@ -62,15 +63,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString * tableIdentifier=@"ChannelCell";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:tableIdentifier];
+    NSString * tableIdentifier=@"SiteCell";
+//    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:tableIdentifier];
+//    
+//    if(cell==nil)
+//    {
+//        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
+//    }
+//    
+//    cell.textLabel.text = [self.sites objectAtIndex:indexPath.row];
+    
+    SiteAddCell *cell = [tableView dequeueReusableCellWithIdentifier:tableIdentifier];
     
     if(cell==nil)
     {
-        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
+        cell=[[SiteAddCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
     }
-    
-    cell.textLabel.text = [self.sites objectAtIndex:indexPath.row];
+
+    cell.lblTitle.text = [self.sites objectAtIndex:indexPath.row];
     return cell;
 }
 
