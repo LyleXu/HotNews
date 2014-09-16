@@ -212,8 +212,8 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1iy-5o-jGa">
-                                            <rect key="frame" x="255" y="7" width="51" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="btnAdd" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qcP-l6-35f">
+                                            <rect key="frame" x="255" y="7" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="+">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -222,7 +222,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="btnAdd" destination="1iy-5o-jGa" id="Fib-e2-3Nn"/>
+                                    <outlet property="btnAdd" destination="qcP-l6-35f" id="xNJ-iw-2Yu"/>
                                     <outlet property="lblTitle" destination="Qoy-Lf-P5u" id="k9q-0P-Bk9"/>
                                 </connections>
                             </tableViewCell>

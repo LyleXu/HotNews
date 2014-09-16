@@ -26,15 +26,15 @@
         NSMutableArray* a1 = [NSMutableArray new];
         NSMutableArray* a2 = [NSMutableArray new];
         NSMutableArray* a3 = [NSMutableArray new];
-        [a1 addObject:@"a1.1"];
-        [a1 addObject:@"a1.2"];
-        [a1 addObject:@"a1.3"];
-        [a2 addObject:@"a2.1"];
-        [a2 addObject:@"a2.2"];
-        [a2 addObject:@"a2.3"];
-        [a3 addObject:@"a3.1"];
-        [a3 addObject:@"a3.2"];
-        [a3 addObject:@"a3.3"];
+        [a1 addObject:@"CocoaChina"];
+        [a1 addObject:@"IT之家"];
+        [a1 addObject:@"cnBeta"];
+        [a2 addObject:@"娱乐八卦"];
+        [a2 addObject:@"豆瓣影评"];
+        [a2 addObject:@"八卦娱"];
+        [a3 addObject:@"NBA"];
+        [a3 addObject:@"CBA"];
+        [a3 addObject:@"英超"];
         
         NSMutableDictionary* temp = [NSMutableDictionary new];
         [temp setObject:[a1 copy] forKey:@"科技"];
@@ -45,14 +45,6 @@
     }
     
     return _sectionData;
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
-    return self;
 }
 
 -(IBAction) doneTapped:(id) sender {
@@ -74,11 +66,8 @@
 {
     if ([segue.identifier isEqualToString:@"ToSingleChannel"]) {
         NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
-        
         ChannelAddViewController* controller = segue.destinationViewController;
-        //controller.sites =  self.sectionData[self.allChannels indexOfObject:indexPath.row];
-        NSString* channelName = [self.allChannels objectAtIndex:indexPath.row];
-        controller.sites = [self.sectionData objectForKey: channelName];
+        controller.sites = [self.sectionData objectForKey: [self.allChannels objectAtIndex:indexPath.row]];
     }
 }
 
@@ -108,7 +97,7 @@
     {
         cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
     }
-
+    
     cell.textLabel.text = [self.allChannels objectAtIndex:indexPath.row];
     return cell;
 }

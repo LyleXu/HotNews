@@ -64,24 +64,35 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString * tableIdentifier=@"SiteCell";
-//    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:tableIdentifier];
-//    
-//    if(cell==nil)
-//    {
-//        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
-//    }
-//    
-//    cell.textLabel.text = [self.sites objectAtIndex:indexPath.row];
-    
     SiteAddCell *cell = [tableView dequeueReusableCellWithIdentifier:tableIdentifier];
-    
-    if(cell==nil)
-    {
-        cell=[[SiteAddCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
-    }
-
     cell.lblTitle.text = [self.sites objectAtIndex:indexPath.row];
+
+    //Bind click event
+    [cell.btnAdd setTitle:indexPath.row == 0 ? @"√": @"+" forState:UIControlStateNormal];
+    [cell.btnAdd setEnabled: indexPath.row == 0 ? false: true];
+    [cell.btnAdd addTarget:self action:@selector(myBtnClick:event:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
 }
 
+-(void)myBtnClick:(id)sender event:(id)event
+{
+    //Get the location according to touch, and then find current row
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint currentTouchPosition = [touch locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:currentTouchPosition];
+
+    if(indexPath != nil)
+    {
+        NSInteger* tRow = indexPath.row +1;
+        NSString *titileString = [NSString stringWithFormat:@"Current index equals: %ld", tRow];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"imtitle" message:titileString delegate:self cancelButtonTitle:@"OK"otherButtonTitles:nil];
+        
+        SiteAddCell* currentCell = [self.tableView cellForRowAtIndexPath:indexPath];
+        [currentCell.btnAdd setEnabled: false];
+        [currentCell.btnAdd setTitle:@"√" forState:UIControlStateNormal];
+        
+        [alert show];
+    }
+}
 @end
