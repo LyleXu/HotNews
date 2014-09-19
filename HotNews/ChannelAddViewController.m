@@ -10,18 +10,38 @@
 #import "SiteAddCell.h"
 
 @implementation ChannelAddViewController
-@synthesize allAddedSites = _allAddedSites;
+@synthesize addedSites = _addedSites;
 
--(NSArray*)allAddedSites
+-(NSMutableArray*)addedSites
 {
-    _allAddedSites = nil;
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    NSString *addedSites = [defaults objectForKey:@"addedSites"];
-    if (addedSites != nil) {
-        _allAddedSites = [addedSites componentsSeparatedByString:@"|"];
+    if (_addedSites == nil) {
+        _addedSites = [[defaults objectForKey:@"addedSites"] mutableCopy];
     }
     
-    return _allAddedSites;
+    return _addedSites;
+}
+
+- (void)AddSiteIntoMemory: (NSString *)siteName
+{
+    if (self.addedSites == nil) {
+        self.addedSites = [[NSMutableArray alloc] init];
+    }
+    
+    [self.addedSites addObject: siteName];
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    [defaults setObject: [self.addedSites copy] forKey:@"addedSites"];
+    [defaults synchronize];
+}
+
+- (void)RemoveSiteFromMemory: (NSString *)siteName
+{
+    if ([self.addedSites containsObject: siteName]) {
+        [self.addedSites removeObject: siteName];
+        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+        [defaults setObject: [self.addedSites copy] forKey:@"addedSites"];
+        [defaults synchronize];
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -47,21 +67,12 @@
     [super didReceiveMemoryWarning];
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:@"ToDetailNews"]) {
-//        NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
-//    
-//        //        NewsDetailViewController* controller = segue.destinationViewController;
-//        //        controller.newsInfo =  self.sectionData[indexPath.row];
-//    }
-//}
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     
-    self.sites = nil;
+    self.allSites = nil;
+    self.addedSites = nil;
 }
 
 - (BOOL)shouldAutorotate
@@ -71,7 +82,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.sites count];
+    return [self.allSites count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,16 +90,15 @@
     bool* isAdded = false;
     NSString * tableIdentifier=@"SiteCell";
     SiteAddCell *cell = [tableView dequeueReusableCellWithIdentifier:tableIdentifier];
-    NSString* currentTitle = [self.sites objectAtIndex:indexPath.row];
+    NSString* currentTitle = [self.allSites objectAtIndex:indexPath.row];
     cell.lblTitle.text = currentTitle;
 
-    if (self.allAddedSites != nil && [self.allAddedSites containsObject: currentTitle]) {
+    if (self.addedSites != nil && [self.addedSites containsObject: currentTitle]) {
         isAdded = true;
     } ;
     
     //Bind click event
     [cell.btnAdd setTitle: isAdded ? @"√": @"+" forState:UIControlStateNormal];
-    [cell.btnAdd setEnabled: !isAdded];
     [cell.btnAdd addTarget:self action:@selector(addBtnClick:event:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
@@ -103,56 +113,17 @@
 
     if(indexPath != nil)
     {
-//        NSInteger* tRow = indexPath.row +1;
-//        NSString *titileString = [NSString stringWithFormat:@"Current index equals: %ld", tRow];
-//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"imtitle" message:titileString delegate:self cancelButtonTitle:@"OK"otherButtonTitles:nil];
-//        [alert show];
-        
-        //Update the status of current cell
+        //Update title, and restore data into memory
         SiteAddCell* currentCell = [self.tableView cellForRowAtIndexPath:indexPath];
-        [currentCell.btnAdd setEnabled: false];
-        [currentCell.btnAdd setTitle:@"√" forState:UIControlStateNormal];
-
-        //保存数据：
-        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-        NSString* addedSites = [defaults objectForKey:@"addedSites"];
-        addedSites = addedSites == nil? currentCell.lblTitle.text :
-        [NSString stringWithFormat: @"%@|%@", addedSites, currentCell.lblTitle.text];
-        [defaults setObject:addedSites forKey:@"addedSites"];
         
-        //[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"addedSites"];
-        [defaults synchronize];
-        
-//        //获得UIImage实例
-//        UIImage *image=[[UIImage alloc]initWithContentsOfFile:@"photo.jpg"];
-//        NSData *imageData = UIImageJPEGRepresentation(image, 100);//UIImage对象转换成NSData
-//        [defaults synchronize];//用synchronize方法把数据持久化到standardUserDefaults数据库
-        
-//        //读取数据：
-//        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-//        NSString *name = [defaults objectForKey:@"name"];//根据键值取出name
-//        NSData *imageData = [defaults dataForKey:@"image"];
-//        UIImage *Image = [UIImage imageWithData:imageData];//NSData转换为UIImage
-        
-//        //Delete user data
-//        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"test"];
-//        [[NSUserDefaults standardUserDefaults] synchronize];
-//        
-//        //Remove all user data
-//        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"dontClearHXCache"])
-//        {
-//            NSString *appDomainStr = [[NSBundle mainBundle] bundleIdentifier];
-//            [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomainStr];
-//            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"dontClearHXCache"];
-//            [[NSUserDefaults standardUserDefaults]synchronize];
-//        }
-//        else
-//        {
-//            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"dontClearHXCache"];
-//            [[NSUserDefaults standardUserDefaults]synchronize];
-//            
-//        }
-        
+        if (currentCell.btnAdd.titleLabel.text == @"√") {
+            [currentCell.btnAdd setTitle:@"+" forState:UIControlStateNormal];
+            [self RemoveSiteFromMemory: currentCell.lblTitle.text];
+        }
+        else {
+            [currentCell.btnAdd setTitle:@"√" forState:UIControlStateNormal];
+            [self AddSiteIntoMemory: currentCell.lblTitle.text ];
+        }
     }
 }
 @end

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ChannelAddViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong) NSArray * sites;
-@property (nonatomic,strong) NSArray * allAddedSites;
+@property (nonatomic,strong) NSArray * allSites;
+@property (nonatomic,strong) NSMutableArray * addedSites;
+
+- (void)AddSiteIntoMemory: (NSString *)siteName;
+- (void)RemoveSiteFromMemory: (NSString *)siteName;
 @end

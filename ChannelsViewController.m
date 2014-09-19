@@ -67,7 +67,7 @@
     if ([segue.identifier isEqualToString:@"ToSingleChannel"]) {
         NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
         ChannelAddViewController* controller = segue.destinationViewController;
-        controller.sites = [self.sectionData objectForKey: [self.allChannels objectAtIndex:indexPath.row]];
+        controller.allSites = [self.sectionData objectForKey: [self.allChannels objectAtIndex:indexPath.row]];
     }
 }
 
