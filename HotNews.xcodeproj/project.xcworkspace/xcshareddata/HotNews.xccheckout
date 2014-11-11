@@ -14,7 +14,7 @@
 		<string>https://github.com/LyleXu/HotNews.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HotNews.xcodeproj/project.xcworkspace</string>
+	<string>HotNews.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C7AEFECD2C96E1A3387EA457053F07F619BFEFE0</key>

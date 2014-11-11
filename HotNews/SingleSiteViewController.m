@@ -16,8 +16,8 @@
 -(NSMutableArray*)sectionData
 {
     if(_sectionData == nil)
-    { 
-        _sectionData =  [DataLayer GetAllNews:@"0"];
+    {
+        _sectionData =  [DataLayer GetAllNews:@"cnbeta"];
     }
     
     return _sectionData;
