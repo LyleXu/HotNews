@@ -51,7 +51,7 @@
 }
 
 //Array of CNewsInfo
-+ (NSMutableArray*) GetAllNews:(NSString*)newsName;
++ (NSMutableArray*) GetAllNews:(NSString*)newsName
 {
     NSArray* parameters = [NSArray arrayWithObjects: newsName, nil];
     NSDictionary* result = [self FetchData:@"RssService" methodName:@"GetRss" parameters:parameters];

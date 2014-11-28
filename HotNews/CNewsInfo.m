@@ -9,7 +9,7 @@
 #import "CNewsInfo.h"
 
 @implementation CNewsInfo
-
+@synthesize title,link,description;
 -(void) Parse:(NSDictionary*) data
 {
     self.title = [data objectForKey:@"title"] != [NSNull null] ? [[data objectForKey:@"title"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] : nil;

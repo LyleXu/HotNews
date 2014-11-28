@@ -25,11 +25,7 @@
     [super viewDidLoad];
     NSURL *url = [NSURL URLWithString: newsInfo.link];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:req];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
+    self.webView.scalesPageToFit = YES;
+    [self.webView loadRequest:req];
 }
 @end

@@ -17,7 +17,7 @@
 {
     if(_sectionData == nil)
     {
-        _sectionData =  [DataLayer GetAllNews:@"cnbeta"];
+        _sectionData =  [DataLayer GetAllNews:@"weiphone"];
     }
     
     return _sectionData;
