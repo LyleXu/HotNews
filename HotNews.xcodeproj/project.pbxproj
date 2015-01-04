@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D32F5371A395250005E1349 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D32F5341A395250005E1349 /* libWeiboSDK.a */; };
-		6D32F5381A395250005E1349 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D32F5351A395250005E1349 /* WeiboSDK.bundle */; };
 		6D32F53B1A395528005E1349 /* weibo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D32F53A1A395528005E1349 /* weibo@2x.png */; };
 		6D32F53E1A3955A8005E1349 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D32F53D1A3955A8005E1349 /* LoginViewController.m */; };
 		6DA91DC6195C0C9900F2741A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA91DC5195C0C9900F2741A /* Foundation.framework */; };
@@ -48,6 +46,9 @@
 		6DFBD53919C6E058005638A2 /* ChannelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53819C6E058005638A2 /* ChannelsViewController.m */; };
 		6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */; };
 		6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53E19C7D234005638A2 /* SiteAddCell.m */; };
+		96106CD01A597370002BD7CC /* pyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96106CCF1A597370002BD7CC /* pyViewController.m */; };
+		96923BBE1A4A85F00053B255 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96923BBB1A4A85F00053B255 /* libWeiboSDK.a */; };
+		96923BBF1A4A85F00053B255 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6D32F5341A395250005E1349 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
-		6D32F5351A395250005E1349 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
-		6D32F5361A395250005E1349 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		6D32F5391A39535A005E1349 /* WeiboSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WeiboSDK-Prefix.pch"; path = "libWeiboSDK/WeiboSDK-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		6D32F53A1A395528005E1349 /* weibo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo@2x.png"; sourceTree = "<group>"; };
 		6D32F53C1A3955A8005E1349 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -132,6 +130,11 @@
 		6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelAddViewController.m; sourceTree = "<group>"; };
 		6DFBD53D19C7D234005638A2 /* SiteAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteAddCell.h; sourceTree = "<group>"; };
 		6DFBD53E19C7D234005638A2 /* SiteAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteAddCell.m; sourceTree = "<group>"; };
+		96106CCE1A597370002BD7CC /* pyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyViewController.h; sourceTree = "<group>"; };
+		96106CCF1A597370002BD7CC /* pyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pyViewController.m; sourceTree = "<group>"; };
+		96923BBB1A4A85F00053B255 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = libWeiboSDK/libWeiboSDK.a; sourceTree = SOURCE_ROOT; };
+		96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = SOURCE_ROOT; };
+		96923BBD1A4A85F00053B255 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = libWeiboSDK/WeiboSDK.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +142,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96923BBE1A4A85F00053B255 /* libWeiboSDK.a in Frameworks */,
 				6DA91DC8195C0C9900F2741A /* CoreGraphics.framework in Frameworks */,
 				6DA91DCA195C0C9900F2741A /* UIKit.framework in Frameworks */,
 				6DA91DC6195C0C9900F2741A /* Foundation.framework in Frameworks */,
-				6D32F5371A395250005E1349 /* libWeiboSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,9 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				6D32F5391A39535A005E1349 /* WeiboSDK-Prefix.pch */,
-				6D32F5341A395250005E1349 /* libWeiboSDK.a */,
-				6D32F5351A395250005E1349 /* WeiboSDK.bundle */,
-				6D32F5361A395250005E1349 /* WeiboSDK.h */,
+				96923BBB1A4A85F00053B255 /* libWeiboSDK.a */,
+				96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */,
+				96923BBD1A4A85F00053B255 /* WeiboSDK.h */,
 			);
 			name = libWeiboSDK;
 			path = "../../../Downloads/iOS_Develop/weibo_ios_sdk-master/libWeiboSDK";
@@ -234,6 +237,8 @@
 				6DFBD53E19C7D234005638A2 /* SiteAddCell.m */,
 				6D32F53C1A3955A8005E1349 /* LoginViewController.h */,
 				6D32F53D1A3955A8005E1349 /* LoginViewController.m */,
+				96106CCE1A597370002BD7CC /* pyViewController.h */,
+				96106CCF1A597370002BD7CC /* pyViewController.m */,
 			);
 			path = HotNews;
 			sourceTree = "<group>";
@@ -399,7 +404,7 @@
 				6DA91DDC195C0C9900F2741A /* Main_iPad.storyboard in Resources */,
 				6DA91DE1195C0C9900F2741A /* Images.xcassets in Resources */,
 				6DD241B319988AD300EECAA9 /* Icons in Resources */,
-				6D32F5381A395250005E1349 /* WeiboSDK.bundle in Resources */,
+				96923BBF1A4A85F00053B255 /* WeiboSDK.bundle in Resources */,
 				6DA91DD9195C0C9900F2741A /* Main_iPhone.storyboard in Resources */,
 				6DA91DD0195C0C9900F2741A /* InfoPlist.strings in Resources */,
 				6D32F53B1A395528005E1349 /* weibo@2x.png in Resources */,
@@ -429,6 +434,7 @@
 				6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */,
 				6DE0230119B6B6FB00889AD7 /* SBJsonStreamParserState.m in Sources */,
 				6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */,
+				96106CD01A597370002BD7CC /* pyViewController.m in Sources */,
 				6D32F53E1A3955A8005E1349 /* LoginViewController.m in Sources */,
 				6DE0230719B6B6FB00889AD7 /* SBJsonWriter.m in Sources */,
 				6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */,
@@ -583,8 +589,8 @@
 				GCC_PREFIX_HEADER = "HotNews/HotNews-Prefix.pch";
 				INFOPLIST_FILE = "HotNews/HotNews-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/gtcc/Downloads/iOS_Develop/weibo_ios_sdk-master/libWeiboSDK",
+					libWeiboSDK,
+					"$(PROJECT_DIR)/libWeiboSDK",
 				);
 				OTHER_LDFLAGS = "-ObjeC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -601,8 +607,8 @@
 				GCC_PREFIX_HEADER = "HotNews/HotNews-Prefix.pch";
 				INFOPLIST_FILE = "HotNews/HotNews-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/gtcc/Downloads/iOS_Develop/weibo_ios_sdk-master/libWeiboSDK",
+					libWeiboSDK,
+					"$(PROJECT_DIR)/libWeiboSDK",
 				);
 				OTHER_LDFLAGS = "-ObjeC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
