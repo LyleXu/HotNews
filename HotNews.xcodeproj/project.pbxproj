@@ -46,7 +46,7 @@
 		6DFBD53919C6E058005638A2 /* ChannelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53819C6E058005638A2 /* ChannelsViewController.m */; };
 		6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */; };
 		6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53E19C7D234005638A2 /* SiteAddCell.m */; };
-		96106CD01A597370002BD7CC /* pyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96106CCF1A597370002BD7CC /* pyViewController.m */; };
+		96106CD01A597370002BD7CC /* CatchWebContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96106CCF1A597370002BD7CC /* CatchWebContent.m */; };
 		96923BBE1A4A85F00053B255 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96923BBB1A4A85F00053B255 /* libWeiboSDK.a */; };
 		96923BBF1A4A85F00053B255 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */; };
 /* End PBXBuildFile section */
@@ -130,8 +130,8 @@
 		6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelAddViewController.m; sourceTree = "<group>"; };
 		6DFBD53D19C7D234005638A2 /* SiteAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteAddCell.h; sourceTree = "<group>"; };
 		6DFBD53E19C7D234005638A2 /* SiteAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteAddCell.m; sourceTree = "<group>"; };
-		96106CCE1A597370002BD7CC /* pyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyViewController.h; sourceTree = "<group>"; };
-		96106CCF1A597370002BD7CC /* pyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pyViewController.m; sourceTree = "<group>"; };
+		96106CCE1A597370002BD7CC /* CatchWebContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchWebContent.h; sourceTree = "<group>"; };
+		96106CCF1A597370002BD7CC /* CatchWebContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchWebContent.m; sourceTree = "<group>"; };
 		96923BBB1A4A85F00053B255 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = libWeiboSDK/libWeiboSDK.a; sourceTree = SOURCE_ROOT; };
 		96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = SOURCE_ROOT; };
 		96923BBD1A4A85F00053B255 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = libWeiboSDK/WeiboSDK.h; sourceTree = SOURCE_ROOT; };
@@ -237,8 +237,8 @@
 				6DFBD53E19C7D234005638A2 /* SiteAddCell.m */,
 				6D32F53C1A3955A8005E1349 /* LoginViewController.h */,
 				6D32F53D1A3955A8005E1349 /* LoginViewController.m */,
-				96106CCE1A597370002BD7CC /* pyViewController.h */,
-				96106CCF1A597370002BD7CC /* pyViewController.m */,
+				96106CCE1A597370002BD7CC /* CatchWebContent.h */,
+				96106CCF1A597370002BD7CC /* CatchWebContent.m */,
 			);
 			path = HotNews;
 			sourceTree = "<group>";
@@ -434,7 +434,7 @@
 				6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */,
 				6DE0230119B6B6FB00889AD7 /* SBJsonStreamParserState.m in Sources */,
 				6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */,
-				96106CD01A597370002BD7CC /* pyViewController.m in Sources */,
+				96106CD01A597370002BD7CC /* CatchWebContent.m in Sources */,
 				6D32F53E1A3955A8005E1349 /* LoginViewController.m in Sources */,
 				6DE0230719B6B6FB00889AD7 /* SBJsonWriter.m in Sources */,
 				6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */,

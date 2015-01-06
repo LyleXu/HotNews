@@ -6,37 +6,27 @@
 //  Copyright (c) 2015年 xc. All rights reserved.
 //
 
-#import "pyViewController.h"
+#import "CatchWebContent.h"
 
-@interface pyViewController ()
+@interface CatchWebContent ()
 @end
 
-@implementation pyViewController
+@implementation CatchWebContent
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-//使用正则匹配
--(void)regexp:(NSString *)string
-{
-    //设置匹配规则
-    NSString *ruler = @"<div class=\"cc\">(.*?)</div>(.*?)</div>";
-    NSString *str = [self matchHTML:string withRuler:ruler];
-    
-    //输出匹配到的内容
-    //NSLog(@"%@",str);
-    //self.myText.text = str;
-}
+////使用正则匹配
+//-(void)regexp:(NSString *)string
+//{
+//    //设置匹配规则
+//    NSString *ruler = @"<div class=\"cc\">(.*?)</div>(.*?)</div>";
+//    NSString *str = [self matchHTML:string withRuler:ruler];
+//    
+//    //输出匹配到的内容
+//    //NSLog(@"%@",str);
+//    //self.myText.text = str;
+//}
 
 //返回匹配好的字符串
--(NSString *)matchHTML:(NSString *)string withRuler:(NSString *)ruler
++(NSString *)matchHTML:(NSString *)string withRuler:(NSString *)ruler
 {
     //实例化正则表达式
     NSError *err = Nil;
@@ -52,7 +42,7 @@
     
     if (firstMatch) {
         //设置范围
-        NSRange range = [firstMatch rangeAtIndex:2];
+        NSRange range = [firstMatch rangeAtIndex:1];
         //输出匹配到的内容
         NSLog(@"test matchhtml",[string substringWithRange:range]);
         return [string substringWithRange:range];
@@ -60,5 +50,4 @@
     
     return  @"no validate content";
 }
-
 @end

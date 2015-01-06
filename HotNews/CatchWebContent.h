@@ -1,5 +1,5 @@
 //
-//  pyViewController.h
+//  CatchWebContent
 //  HotNews
 //
 //  Created by Jason on 15/1/4.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface pyViewController : UIViewController
-
+@interface CatchWebContent : NSObject
++(NSString *)matchHTML:(NSString *)string withRuler:(NSString *)ruler;
 @end
