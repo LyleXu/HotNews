@@ -12,22 +12,10 @@
 @end
 
 @implementation CatchWebContent
-
-////使用正则匹配
-//-(void)regexp:(NSString *)string
-//{
-//    //设置匹配规则
-//    NSString *ruler = @"<div class=\"cc\">(.*?)</div>(.*?)</div>";
-//    NSString *str = [self matchHTML:string withRuler:ruler];
-//    
-//    //输出匹配到的内容
-//    //NSLog(@"%@",str);
-//    //self.myText.text = str;
-//}
-
 //返回匹配好的字符串
-+(NSString *)matchHTML:(NSString *)string withRuler:(NSString *)ruler
++(NSString *)matchHTML:(NSString *)rawstring withRuler:(NSString *)ruler
 {
+    NSString *result=@"";
     //实例化正则表达式
     NSError *err = Nil;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:ruler options:NSRegularExpressionCaseInsensitive | NSRegularExpressionDotMatchesLineSeparators error:&err];
@@ -37,17 +25,29 @@
     }
     
     //开始匹配把,要把这个匹配的内容找到才好啊
-    NSTextCheckingResult *firstMatch = [regex firstMatchInString:string options:NSMatchingReportCompletion range:NSMakeRange(0, string.length)];
+    NSTextCheckingResult *firstMatch = [regex firstMatchInString:rawstring options:NSMatchingReportCompletion range:NSMakeRange(0, rawstring.length)];
+    
     NSLog(@"%@",firstMatch);
     
     if (firstMatch) {
-        //设置范围
-        NSRange range = [firstMatch rangeAtIndex:1];
-        //输出匹配到的内容
-        NSLog(@"test matchhtml",[string substringWithRange:range]);
-        return [string substringWithRange:range];
+        NSRange range1 = [firstMatch rangeAtIndex:1];
+        NSString *contents = [rawstring substringWithRange:range1];
+        
+        NSString *pRuler= @"<p>(.*?)</p>|<img.*?/>";
+        NSRegularExpression *regex2 = [NSRegularExpression regularExpressionWithPattern:pRuler options:NSRegularExpressionCaseInsensitive | NSRegularExpressionDotMatchesLineSeparators error:&err];
+        NSArray *pResults = [regex2 matchesInString:contents options:0 range:NSMakeRange(0, contents.length)];
+        
+        for (NSTextCheckingResult *match in pResults) {
+            if (!NSEqualRanges([match rangeAtIndex:1], NSMakeRange(NSNotFound, 0))) {
+                result = [NSString stringWithFormat:@"%@ <p>%@</p>", result, [contents substringWithRange:[match rangeAtIndex:1]]];
+            }
+//            else
+//            {
+//                result = [NSString stringWithFormat:@"%@ <p>%@</p>", result, [contents substringWithRange:[match rangeAtIndex:2]]];
+//            }
+        }
     }
     
-    return  @"no validate content";
+    return  result;
 }
 @end
