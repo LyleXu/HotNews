@@ -28,7 +28,7 @@
         news.description = @"鲜果网于今日宣布将于12月12日关闭RSS订阅服务，今后将更关注与鲜果客户端的发展，而RSS阅读器用户仍可以通过鲜果网导出订阅数据。";
         news.link = @"http://www.cnbeta.com/articles/345753.htm";
         //news.link = @"http://site.douban.com/blooming/widget/notes/5354166/note/247683834/";
-        
+    
         
         [_sectionData addObject:news];
     }
