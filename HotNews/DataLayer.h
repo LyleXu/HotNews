@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface DataLayer : NSObject
-+(NSMutableArray*) GetAllNews:(NSString*)newsName;
++ (NSMutableArray*) GetAllNews:(NSString*)rssUrl maxRequiredCount:(NSString*)maxCount;
++(NSString*)GetRssContentByUrl:(NSString*)url;
 @end

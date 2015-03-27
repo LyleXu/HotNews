@@ -51,10 +51,10 @@
 }
 
 //Array of CNewsInfo
-+ (NSMutableArray*) GetAllNews:(NSString*)newsName
++ (NSMutableArray*) GetAllNews:(NSString*)rssUrl maxRequiredCount:(NSString*)maxCount
 {
-    NSArray* parameters = [NSArray arrayWithObjects: newsName, nil];
-    NSDictionary* result = [self FetchData:@"RssService" methodName:@"GetRss" parameters:parameters];
+    NSArray* parameters = [NSArray arrayWithObjects: rssUrl, maxCount, nil];
+    NSDictionary* result = [self FetchData:@"RssService" methodName:@"GetRssFeeds" parameters:parameters];
     NSDictionary* datas = [result valueForKey:@"rss"];
     
     NSMutableArray *AllNews = [NSMutableArray array];
@@ -69,6 +69,15 @@
     }
     
     return [AllNews copy];
+}
+
++(NSString*)GetRssContentByUrl:(NSString*)url
+{
+    NSArray* parameters = [NSArray arrayWithObjects: url, nil];
+    NSDictionary* result = [self FetchData:@"RssService" methodName:@"GetRssContentByUrl" parameters:parameters];
+    NSString* rssContent = [result valueForKey:@"rss"];
+    
+    return rssContent;
 }
 
 @end
