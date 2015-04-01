@@ -43,7 +43,7 @@
     NSArray * photosArray = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self photosDirectory] error:nil];
     self.photosList = nil;
     self.photosCache = [NSMutableDictionary dictionary];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [photosArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSString *path = [[self photosDirectory] stringByAppendingPathComponent:obj];
             CGSize size = [UIImage imageWithContentsOfFile:path].size;}];
@@ -54,7 +54,7 @@
             [self.photosList addObject:@"plus-sign.jpeg"];
             [self.collectionView reloadData];
         });
-    });
+    //});
 }
 
 - (void)didReceiveMemoryWarning
