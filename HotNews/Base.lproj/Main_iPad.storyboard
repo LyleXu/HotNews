@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="WGJ-BL-rYr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="WGJ-BL-rYr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -31,7 +32,6 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P3G-qN-OJ2">
                                             <rect key="frame" x="0.0" y="0.0" width="109" height="108"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -49,7 +49,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="5nw-00-LKb"/>
-                    <size key="freeformSize" width="768" height="1024"/>
                     <connections>
                         <segue destination="Uj8-Te-eYF" kind="push" identifier="ToSingleNewsSite" id="9yG-2L-TqA"/>
                     </connections>
@@ -58,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="24" y="-335"/>
         </scene>
-        <!--Single Site View Controller - Title-->
+        <!--Title-->
         <scene sceneID="Fq4-US-Mtx">
             <objects>
                 <tableViewController id="Uj8-Te-eYF" customClass="SingleSiteViewController" sceneMemberID="viewController">
@@ -110,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="2651" y="-351"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Item-->
         <scene sceneID="qmE-gX-Hu1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fay-YG-JZU" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fay-YG-JZU" customClass="LCPanNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8hF-tF-t3m"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1eV-Sm-x2L">
