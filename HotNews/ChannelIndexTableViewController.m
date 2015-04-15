@@ -16,8 +16,8 @@
 
 -(NSMutableArray*)channelData
 {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"SelectedChannels"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"SelectedChannels"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
 
     //if (_channelData == nil) {
         NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
