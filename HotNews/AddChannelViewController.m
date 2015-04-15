@@ -7,7 +7,57 @@
 //
 
 #import "AddChannelViewController.h"
+#import "ChannelItem.h"
 
 @implementation AddChannelViewController
+@synthesize Channels = _channels;
+@synthesize txtChannelName, txtChannelUrl;
+
+-(NSMutableArray*)Channels{
+    if (_channels == nil) {
+        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+        NSData* data  = [[NSUserDefaults standardUserDefaults] objectForKey:@"SelectedChannels"];
+        _channels = [[NSKeyedUnarchiver unarchiveObjectWithData:data] mutableCopy];
+    }
+    
+    return _channels;
+}
+
+- (void)AddChannelIntoMemory: (ChannelItem *)c
+{
+    if (self.Channels == nil) {
+        self.Channels = [[NSMutableArray alloc] init];
+    }
+    
+    [self.Channels addObject: c];
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:self.Channels] forKey:@"SelectedChannels"];
+    
+    [defaults synchronize];
+}
+
+-(IBAction)addChannelBtn:(id)sender
+{
+    ChannelItem *c = [ChannelItem new];
+    c.title = self.txtChannelName.text;
+    c.link = self.txtChannelUrl.text;
+    
+    [self AddChannelIntoMemory: c ];
+    
+    NSString* msg = [NSString stringWithFormat:@"Add %@ successfully!", self.txtChannelName.text];
+    
+    UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert1 show];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+}
 
 @end

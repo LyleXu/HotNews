@@ -10,4 +10,8 @@
 
 @interface AddChannelViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField   *txtChannelName;
+@property (weak, nonatomic) IBOutlet UITextField   *txtChannelUrl;
+@property (nonatomic,strong) NSMutableArray * Channels;
+
 @end

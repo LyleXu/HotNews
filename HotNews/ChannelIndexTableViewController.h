@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChannelIndexTableViewController : UITableViewController
-
+@interface ChannelIndexTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic,strong) NSMutableArray * channelData;
 @end

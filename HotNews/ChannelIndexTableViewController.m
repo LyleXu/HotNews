@@ -7,94 +7,110 @@
 //
 
 #import "ChannelIndexTableViewController.h"
-
-@interface ChannelIndexTableViewController ()
-
-@end
+#import "SingleSiteViewController.h"
+#import "ChannelCell.h"
+#import "ChannelItem.h"
 
 @implementation ChannelIndexTableViewController
+@synthesize channelData = _channelData;
 
-- (void)viewDidLoad {
+-(NSMutableArray*)channelData
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"SelectedChannels"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    //if (_channelData == nil) {
+        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+        NSData* data  = [[NSUserDefaults standardUserDefaults] objectForKey:@"SelectedChannels"];
+        _channelData = [[NSKeyedUnarchiver unarchiveObjectWithData:data] mutableCopy];
+    //}
+    
+    if (_channelData != nil && _channelData.count>0) {
+        return _channelData;
+    }
+    
+    //In case, the memory cache is empty, then initialize a array
+    if (_channelData == nil){
+        _channelData = [NSMutableArray array];
+    
+    ChannelItem* channel1 = [ChannelItem new];
+    channel1.title = @"cnBeta";
+    channel1.link = @"http://www.cnbeta.com/articles/345753.htm";
+            
+    ChannelItem* channel2 = [ChannelItem new];
+    channel2.title = @"威锋网";
+    channel2.link = @"http://www.cnbeta.com/articles/345753.htm";
+            
+    ChannelItem* channel3 = [ChannelItem new];
+    channel3.title = @"博客园";
+    channel3.link = @"http://www.cnbeta.com/articles/345753.htm";
+            
+    [_channelData addObject:channel1];
+    [_channelData addObject:channel2];
+    [_channelData addObject:channel3];
+    }
+    
+    return _channelData;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+    }
+    return self;
+}
+
+-(IBAction) doneTapped:(id) sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    SingleSiteViewController *controller = segue.destinationViewController;
+}
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    self.channelData = nil;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.channelData count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString * tableIdentifier=@"ChannelCell";
+    ChannelCell *cell=[tableView dequeueReusableCellWithIdentifier:tableIdentifier];
+    if(cell==nil){
+        // first load
+        cell=[[ChannelCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
+    }
     
-    // Configure the cell...
+    CNewsInfo* news = [self.channelData objectAtIndex:indexPath.row];
+    cell.lblTitle.text = news.title;
+    
+    NSLog(news.title);
     
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
+

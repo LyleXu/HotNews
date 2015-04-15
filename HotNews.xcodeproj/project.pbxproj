@@ -48,8 +48,12 @@
 		6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */; };
 		6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53E19C7D234005638A2 /* SiteAddCell.m */; };
 		96106CD01A597370002BD7CC /* CatchWebContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96106CCF1A597370002BD7CC /* CatchWebContent.m */; };
+		968E26941ADD6240006533E3 /* ChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E26931ADD6240006533E3 /* ChannelCell.m */; };
+		968E26991ADEAC95006533E3 /* ChannelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E26981ADEAC95006533E3 /* ChannelItem.m */; };
+		968E269C1ADEB2D1006533E3 /* AddChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E269B1ADEB2D1006533E3 /* AddChannelViewController.m */; };
 		96923BBE1A4A85F00053B255 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96923BBB1A4A85F00053B255 /* libWeiboSDK.a */; };
 		96923BBF1A4A85F00053B255 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */; };
+		96F2D1191ADA954500137A38 /* ChannelIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F2D1181ADA954500137A38 /* ChannelIndexTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,9 +139,17 @@
 		6DFBD53E19C7D234005638A2 /* SiteAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteAddCell.m; sourceTree = "<group>"; };
 		96106CCE1A597370002BD7CC /* CatchWebContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchWebContent.h; sourceTree = "<group>"; };
 		96106CCF1A597370002BD7CC /* CatchWebContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchWebContent.m; sourceTree = "<group>"; };
+		968E26921ADD6240006533E3 /* ChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelCell.h; sourceTree = "<group>"; };
+		968E26931ADD6240006533E3 /* ChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelCell.m; sourceTree = "<group>"; };
+		968E26971ADEAC95006533E3 /* ChannelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelItem.h; sourceTree = "<group>"; };
+		968E26981ADEAC95006533E3 /* ChannelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelItem.m; sourceTree = "<group>"; };
+		968E269A1ADEB2D1006533E3 /* AddChannelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddChannelViewController.h; sourceTree = "<group>"; };
+		968E269B1ADEB2D1006533E3 /* AddChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddChannelViewController.m; sourceTree = "<group>"; };
 		96923BBB1A4A85F00053B255 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = libWeiboSDK/libWeiboSDK.a; sourceTree = SOURCE_ROOT; };
 		96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = SOURCE_ROOT; };
 		96923BBD1A4A85F00053B255 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = libWeiboSDK/WeiboSDK.h; sourceTree = SOURCE_ROOT; };
+		96F2D1171ADA954500137A38 /* ChannelIndexTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelIndexTableViewController.h; sourceTree = "<group>"; };
+		96F2D1181ADA954500137A38 /* ChannelIndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelIndexTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +239,8 @@
 				6DD241C019A1D86200EECAA9 /* MKPhotoCell.h */,
 				6DD241C119A1D86200EECAA9 /* MKPhotoCell.m */,
 				6DE0230819B6B79E00889AD7 /* Constraint.h */,
+				96F2D1171ADA954500137A38 /* ChannelIndexTableViewController.h */,
+				96F2D1181ADA954500137A38 /* ChannelIndexTableViewController.m */,
 				6DA91DD4195C0C9900F2741A /* BIDAppDelegate.h */,
 				6DA91DD5195C0C9900F2741A /* BIDAppDelegate.m */,
 				6DA91DD7195C0C9900F2741A /* Main_iPhone.storyboard */,
@@ -251,6 +265,12 @@
 				6D32F53D1A3955A8005E1349 /* LoginViewController.m */,
 				96106CCE1A597370002BD7CC /* CatchWebContent.h */,
 				96106CCF1A597370002BD7CC /* CatchWebContent.m */,
+				968E26921ADD6240006533E3 /* ChannelCell.h */,
+				968E26931ADD6240006533E3 /* ChannelCell.m */,
+				968E26971ADEAC95006533E3 /* ChannelItem.h */,
+				968E26981ADEAC95006533E3 /* ChannelItem.m */,
+				968E269A1ADEB2D1006533E3 /* AddChannelViewController.h */,
+				968E269B1ADEB2D1006533E3 /* AddChannelViewController.m */,
 			);
 			path = HotNews;
 			sourceTree = "<group>";
@@ -447,12 +467,15 @@
 				6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */,
 				6DE0230119B6B6FB00889AD7 /* SBJsonStreamParserState.m in Sources */,
 				6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */,
+				968E26991ADEAC95006533E3 /* ChannelItem.m in Sources */,
 				96106CD01A597370002BD7CC /* CatchWebContent.m in Sources */,
 				6D32F53E1A3955A8005E1349 /* LoginViewController.m in Sources */,
 				6DE0230719B6B6FB00889AD7 /* SBJsonWriter.m in Sources */,
 				6D0655091A66296D002F0652 /* BIDPListOperate.m in Sources */,
 				6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */,
+				968E26941ADD6240006533E3 /* ChannelCell.m in Sources */,
 				6DE022FE19B6B6FB00889AD7 /* SBJsonStreamParser.m in Sources */,
+				968E269C1ADEB2D1006533E3 /* AddChannelViewController.m in Sources */,
 				6DD241B9199A130C00EECAA9 /* SingleSiteViewController.m in Sources */,
 				6DE0230219B6B6FB00889AD7 /* SBJsonStreamWriter.m in Sources */,
 				6DE0230419B6B6FB00889AD7 /* SBJsonStreamWriterState.m in Sources */,
@@ -463,6 +486,7 @@
 				6DA91DD2195C0C9900F2741A /* main.m in Sources */,
 				6DD241BF199C5CFE00EECAA9 /* CNewsInfo.m in Sources */,
 				6DE022FF19B6B6FB00889AD7 /* SBJsonStreamParserAccumulator.m in Sources */,
+				96F2D1191ADA954500137A38 /* ChannelIndexTableViewController.m in Sources */,
 				6DE022FC19B6B6FB00889AD7 /* NSObject+SBJson.m in Sources */,
 				6DE022E019B6B4AD00889AD7 /* DataLayer.m in Sources */,
 			);

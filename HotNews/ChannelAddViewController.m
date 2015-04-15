@@ -12,6 +12,7 @@
 @implementation ChannelAddViewController
 @synthesize addedSites = _addedSites;
 
+
 -(NSMutableArray*)addedSites
 {
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];

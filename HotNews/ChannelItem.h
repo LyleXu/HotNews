@@ -10,4 +10,7 @@
 
 @interface ChannelItem : NSObject
 
+@property(nonatomic,retain)NSString *title;
+@property(nonatomic,retain) NSString *link;
+
 @end

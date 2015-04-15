@@ -10,4 +10,6 @@
 
 @interface ChannelCell : UITableViewCell
 
+@property (nonatomic,weak) IBOutlet UILabel* lblTitle;
+
 @end
