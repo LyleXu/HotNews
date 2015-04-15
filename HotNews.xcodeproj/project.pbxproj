@@ -10,6 +10,9 @@
 		6D0655091A66296D002F0652 /* BIDPListOperate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0655081A66296D002F0652 /* BIDPListOperate.m */; };
 		6D32F53B1A395528005E1349 /* weibo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D32F53A1A395528005E1349 /* weibo@2x.png */; };
 		6D32F53E1A3955A8005E1349 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D32F53D1A3955A8005E1349 /* LoginViewController.m */; };
+		6D79C7FB1ADE5B6D003B9621 /* LCPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79C7F61ADE5B6D003B9621 /* LCPanGestureRecognizer.m */; };
+		6D79C7FC1ADE5B6D003B9621 /* LCPanNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79C7F81ADE5B6D003B9621 /* LCPanNavigationController.m */; };
+		6D79C7FD1ADE5B6D003B9621 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D79C7FA1ADE5B6D003B9621 /* UIView+Snapshot.m */; };
 		6DA91DC6195C0C9900F2741A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA91DC5195C0C9900F2741A /* Foundation.framework */; };
 		6DA91DC8195C0C9900F2741A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA91DC7195C0C9900F2741A /* CoreGraphics.framework */; };
 		6DA91DCA195C0C9900F2741A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA91DC9195C0C9900F2741A /* UIKit.framework */; };
@@ -73,6 +76,12 @@
 		6D32F53A1A395528005E1349 /* weibo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo@2x.png"; sourceTree = "<group>"; };
 		6D32F53C1A3955A8005E1349 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6D32F53D1A3955A8005E1349 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		6D79C7F51ADE5B6D003B9621 /* LCPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPanGestureRecognizer.h; path = PanNavigationController/LCPanGestureRecognizer.h; sourceTree = "<group>"; };
+		6D79C7F61ADE5B6D003B9621 /* LCPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCPanGestureRecognizer.m; path = PanNavigationController/LCPanGestureRecognizer.m; sourceTree = "<group>"; };
+		6D79C7F71ADE5B6D003B9621 /* LCPanNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPanNavigationController.h; path = PanNavigationController/LCPanNavigationController.h; sourceTree = "<group>"; };
+		6D79C7F81ADE5B6D003B9621 /* LCPanNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCPanNavigationController.m; path = PanNavigationController/LCPanNavigationController.m; sourceTree = "<group>"; };
+		6D79C7F91ADE5B6D003B9621 /* UIView+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Snapshot.h"; path = "PanNavigationController/UIView+Snapshot.h"; sourceTree = "<group>"; };
+		6D79C7FA1ADE5B6D003B9621 /* UIView+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Snapshot.m"; path = "PanNavigationController/UIView+Snapshot.m"; sourceTree = "<group>"; };
 		6DA91DC2195C0C9900F2741A /* HotNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA91DC5195C0C9900F2741A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6DA91DC7195C0C9900F2741A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -198,9 +207,23 @@
 			path = "../../../Downloads/iOS_Develop/weibo_ios_sdk-master/libWeiboSDK";
 			sourceTree = "<group>";
 		};
+		6D79C7F41ADE5A3D003B9621 /* PanNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				6D79C7F51ADE5B6D003B9621 /* LCPanGestureRecognizer.h */,
+				6D79C7F61ADE5B6D003B9621 /* LCPanGestureRecognizer.m */,
+				6D79C7F71ADE5B6D003B9621 /* LCPanNavigationController.h */,
+				6D79C7F81ADE5B6D003B9621 /* LCPanNavigationController.m */,
+				6D79C7F91ADE5B6D003B9621 /* UIView+Snapshot.h */,
+				6D79C7FA1ADE5B6D003B9621 /* UIView+Snapshot.m */,
+			);
+			name = PanNavigationController;
+			sourceTree = "<group>";
+		};
 		6DA91DB9195C0C9900F2741A = {
 			isa = PBXGroup;
 			children = (
+				6D79C7F41ADE5A3D003B9621 /* PanNavigationController */,
 				6D32F5331A395250005E1349 /* libWeiboSDK */,
 				6DE022E119B6B5C200889AD7 /* Classes */,
 				6DA91DCB195C0C9900F2741A /* HotNews */,
@@ -459,8 +482,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D79C7FD1ADE5B6D003B9621 /* UIView+Snapshot.m in Sources */,
 				6DA91DD6195C0C9900F2741A /* BIDAppDelegate.m in Sources */,
 				6DE0230319B6B6FB00889AD7 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				6D79C7FB1ADE5B6D003B9621 /* LCPanGestureRecognizer.m in Sources */,
 				6DE0230019B6B6FB00889AD7 /* SBJsonStreamParserAdapter.m in Sources */,
 				6DE0230619B6B6FB00889AD7 /* SBJsonUTF8Stream.m in Sources */,
 				6DA91DDF195C0C9900F2741A /* MKViewController.m in Sources */,
@@ -471,6 +496,7 @@
 				96106CD01A597370002BD7CC /* CatchWebContent.m in Sources */,
 				6D32F53E1A3955A8005E1349 /* LoginViewController.m in Sources */,
 				6DE0230719B6B6FB00889AD7 /* SBJsonWriter.m in Sources */,
+				6D79C7FC1ADE5B6D003B9621 /* LCPanNavigationController.m in Sources */,
 				6D0655091A66296D002F0652 /* BIDPListOperate.m in Sources */,
 				6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */,
 				968E26941ADD6240006533E3 /* ChannelCell.m in Sources */,

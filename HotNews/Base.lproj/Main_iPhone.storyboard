@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rfu-u7-pIz">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rfu-u7-pIz">
+>>>>>>> origin/master
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -68,7 +72,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" showsReorderControl="YES" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="147" id="UCS-5T-O4W">
-                                <rect key="frame" x="0.0" y="86" width="320" height="147"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UCS-5T-O4W" id="dOU-Qq-Gpx">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="146"/>
@@ -236,7 +240,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChannelCell" id="eiZ-8l-9Bu">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eiZ-8l-9Bu" id="aeg-yD-wUe">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -270,7 +274,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SiteCell" id="nzo-MY-Ulh" customClass="SiteAddCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nzo-MY-Ulh" id="T5E-5S-P2n">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -361,8 +365,13 @@
         <!--Item-->
         <scene sceneID="HbJ-2K-Xb8">
             <objects>
+<<<<<<< HEAD
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Czq-kS-nAM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="6vO-ci-JyG"/>
+=======
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uwl-tY-BqZ" customClass="LCPanNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="S0y-6y-sSl"/>
+>>>>>>> origin/master
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PeW-Eb-fLu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
