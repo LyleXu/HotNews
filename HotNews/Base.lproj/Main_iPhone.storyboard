@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rfu-u7-pIz">
-=======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rfu-u7-pIz">
->>>>>>> origin/master
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
@@ -365,13 +361,8 @@
         <!--Item-->
         <scene sceneID="HbJ-2K-Xb8">
             <objects>
-<<<<<<< HEAD
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Czq-kS-nAM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="6vO-ci-JyG"/>
-=======
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uwl-tY-BqZ" customClass="LCPanNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="S0y-6y-sSl"/>
->>>>>>> origin/master
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PeW-Eb-fLu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
