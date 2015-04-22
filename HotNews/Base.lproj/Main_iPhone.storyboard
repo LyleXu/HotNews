@@ -24,7 +24,7 @@
                         </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MKPhotoCell" id="IiP-dW-dh6" customClass="MKPhotoCell">
-                                <rect key="frame" x="0.0" y="64" width="104" height="104"/>
+                                <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
@@ -321,13 +321,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChannelCell" rowHeight="47" id="T4Z-DH-Ssv" customClass="ChannelCell">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T4Z-DH-Ssv" id="i59-eG-Xjy">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblChannelTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d0a-0D-jVi">
-                                            <rect key="frame" x="23" y="0.0" width="258" height="46.5"/>
+                                            <rect key="frame" x="23" y="0.0" width="258" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -361,7 +362,7 @@
         <!--Item-->
         <scene sceneID="HbJ-2K-Xb8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Czq-kS-nAM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Czq-kS-nAM" customClass="LCPanNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="6vO-ci-JyG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PeW-Eb-fLu">

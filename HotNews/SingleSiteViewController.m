@@ -17,10 +17,10 @@
 {
     if(_sectionData == nil)
     {
-        _sectionData =  [DataLayer GetAllNews:@"http://coolshell.cn/rss" maxRequiredCount:@"10"];
+        _sectionData =  [DataLayer GetAllNews:@"http://coolshell.cn/feed" maxRequiredCount:@"10"];
     }
     
-//    if (_sectionData == nil || _sectionData.count == 0) {
+//  if (_sectionData == nil || _sectionData.count == 0) {
 //        _sectionData = [NSMutableArray array];
 //        
 //        CNewsInfo* news = [CNewsInfo new];
