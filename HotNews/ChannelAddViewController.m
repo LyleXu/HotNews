@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 xc. All rights reserved.
 //
 
+//Class to be removed
 #import "ChannelAddViewController.h"
 #import "SiteAddCell.h"
 

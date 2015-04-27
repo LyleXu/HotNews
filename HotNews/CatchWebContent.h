@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 xc. All rights reserved.
 //
 
+//To be removed
 #import <UIKit/UIKit.h>
 
 @interface CatchWebContent : NSObject

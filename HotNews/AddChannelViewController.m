@@ -41,7 +41,6 @@
     ChannelItem *c = [ChannelItem new];
     c.title = self.txtChannelName.text;
     c.link = self.txtChannelUrl.text;
-    //NSLog([NSString stringWithFormat:@"title is: %@", c.title]);
     
     if ([Utility isAlreadyExist: c.title]) {
         NSString* warningMSG = [NSString stringWithFormat:@"The channel [%@] is already exist!", c.title];
