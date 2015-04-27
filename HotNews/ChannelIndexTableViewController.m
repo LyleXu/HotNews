@@ -13,41 +13,60 @@
 
 @implementation ChannelIndexTableViewController
 @synthesize channelData = _channelData;
+//@synthesize builtInChannel = _builtInChannel;
+
+//-(NSMutableArray*)builtInChannel
+//{
+//    if (_builtInChannel == nil) {
+//        _builtInChannel =[NSMutableArray array];
+//        
+//        ChannelItem* channel1 = [ChannelItem new];
+//        channel1.title = @"cnBeta";
+//        channel1.link = @"http://www.cnbeta.com/articles/345753.htm";
+//        
+//        ChannelItem* channel2 = [ChannelItem new];
+//        channel2.title = @"威锋网";
+//        channel2.link = @"http://www.cnbeta.com/articles/345753.htm";
+//        
+//        ChannelItem* channel3 = [ChannelItem new];
+//        channel3.title = @"博客园";
+//        channel3.link = @"http://www.cnbeta.com/articles/345753.htm";
+//        
+//        [_builtInChannel addObject:channel1];
+//        [_builtInChannel addObject:channel2];
+//        [_builtInChannel addObject:channel3];
+//    }
+//    
+//    return _builtInChannel;
+//}
+
 
 -(NSMutableArray*)channelData
 {
 //    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"SelectedChannels"];
 //    [[NSUserDefaults standardUserDefaults] synchronize];
 
-    //if (_channelData == nil) {
-        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-        NSData* data  = [[NSUserDefaults standardUserDefaults] objectForKey:@"SelectedChannels"];
-        _channelData = [[NSKeyedUnarchiver unarchiveObjectWithData:data] mutableCopy];
-    //}
+    if (self.isLoaded == NO) {
+        _channelData = [NSMutableArray new];
     
-    if (_channelData != nil && _channelData.count>0) {
-        return _channelData;
-    }
-    
-    //In case, the memory cache is empty, then initialize a array
-    if (_channelData == nil){
-        _channelData = [NSMutableArray array];
-    
-    ChannelItem* channel1 = [ChannelItem new];
-    channel1.title = @"cnBeta";
-    channel1.link = @"http://www.cnbeta.com/articles/345753.htm";
-            
-    ChannelItem* channel2 = [ChannelItem new];
-    channel2.title = @"威锋网";
-    channel2.link = @"http://www.cnbeta.com/articles/345753.htm";
-            
-    ChannelItem* channel3 = [ChannelItem new];
-    channel3.title = @"博客园";
-    channel3.link = @"http://www.cnbeta.com/articles/345753.htm";
-            
-    [_channelData addObject:channel1];
-    [_channelData addObject:channel2];
-    [_channelData addObject:channel3];
+        if (Utility.builtInChannel !=nil && Utility.builtInChannel.count>0) {
+            for (ChannelItem *builtInItem in Utility.builtInChannel) {
+                [_channelData addObject:builtInItem];
+            }
+        }
+        
+//        NSMutableArray* _storedChannels = [NSMutableArray new];
+//        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+//        NSData* data  = [[NSUserDefaults standardUserDefaults] objectForKey:@"SelectedChannels"];
+//        _storedChannels = [[NSKeyedUnarchiver unarchiveObjectWithData:data] mutableCopy];
+        
+        if ([Utility memoryChannel] !=nil && [Utility memoryChannel].count >0) {
+            for (ChannelItem *item in [Utility memoryChannel]) {
+                [_channelData addObject:item];
+            }
+        }
+        
+        self.isLoaded = YES;
     }
     
     return _channelData;
@@ -92,6 +111,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.isLoaded = NO;
     return [self.channelData count];
 }
 
@@ -107,8 +127,6 @@
     
     CNewsInfo* news = [self.channelData objectAtIndex:indexPath.row];
     cell.lblTitle.text = news.title;
-    
-    NSLog(news.title);
     
     return cell;
 }

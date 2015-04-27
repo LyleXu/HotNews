@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChannelItem.h"
 
 @interface Utility : UIViewController
 
++ (NSMutableArray*) builtInChannel;
++ (NSMutableArray*) memoryChannel;
++ (BOOL *) isAlreadyExist: (NSString*)title;
+
+@property NSMutableArray* _builtInChannel;
 @end

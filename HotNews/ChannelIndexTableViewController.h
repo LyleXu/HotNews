@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Utility.h"
 
 @interface ChannelIndexTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSMutableArray * channelData;
+
+@property (nonatomic, assign) BOOL isLoaded;
 @end

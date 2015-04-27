@@ -41,11 +41,18 @@
     ChannelItem *c = [ChannelItem new];
     c.title = self.txtChannelName.text;
     c.link = self.txtChannelUrl.text;
+    //NSLog([NSString stringWithFormat:@"title is: %@", c.title]);
+    
+    if ([Utility isAlreadyExist: c.title]) {
+        NSString* warningMSG = [NSString stringWithFormat:@"The channel [%@] is already exist!", c.title];
+        UIAlertView *alertWarning = [[UIAlertView alloc] initWithTitle:@"" message: warningMSG delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertWarning show];
+        return;
+    }
     
     [self AddChannelIntoMemory: c ];
     
-    NSString* msg = [NSString stringWithFormat:@"Add %@ successfully!", self.txtChannelName.text];
-    
+    NSString* msg = [NSString stringWithFormat:@"Add [%@] successfully!", self.txtChannelName.text];
     UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert1 show];
 }

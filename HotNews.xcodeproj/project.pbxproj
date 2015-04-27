@@ -54,6 +54,7 @@
 		968E26941ADD6240006533E3 /* ChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E26931ADD6240006533E3 /* ChannelCell.m */; };
 		968E26991ADEAC95006533E3 /* ChannelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E26981ADEAC95006533E3 /* ChannelItem.m */; };
 		968E269C1ADEB2D1006533E3 /* AddChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E269B1ADEB2D1006533E3 /* AddChannelViewController.m */; };
+		968E269F1AED44F2006533E3 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E269E1AED44F2006533E3 /* Utility.m */; };
 		96923BBE1A4A85F00053B255 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96923BBB1A4A85F00053B255 /* libWeiboSDK.a */; };
 		96923BBF1A4A85F00053B255 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */; };
 		96F2D1191ADA954500137A38 /* ChannelIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F2D1181ADA954500137A38 /* ChannelIndexTableViewController.m */; };
@@ -154,6 +155,8 @@
 		968E26981ADEAC95006533E3 /* ChannelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelItem.m; sourceTree = "<group>"; };
 		968E269A1ADEB2D1006533E3 /* AddChannelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddChannelViewController.h; sourceTree = "<group>"; };
 		968E269B1ADEB2D1006533E3 /* AddChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddChannelViewController.m; sourceTree = "<group>"; };
+		968E269D1AED44F2006533E3 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		968E269E1AED44F2006533E3 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		96923BBB1A4A85F00053B255 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = libWeiboSDK/libWeiboSDK.a; sourceTree = SOURCE_ROOT; };
 		96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = SOURCE_ROOT; };
 		96923BBD1A4A85F00053B255 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = libWeiboSDK/WeiboSDK.h; sourceTree = SOURCE_ROOT; };
@@ -294,6 +297,8 @@
 				968E26981ADEAC95006533E3 /* ChannelItem.m */,
 				968E269A1ADEB2D1006533E3 /* AddChannelViewController.h */,
 				968E269B1ADEB2D1006533E3 /* AddChannelViewController.m */,
+				968E269D1AED44F2006533E3 /* Utility.h */,
+				968E269E1AED44F2006533E3 /* Utility.m */,
 			);
 			path = HotNews;
 			sourceTree = "<group>";
@@ -490,6 +495,7 @@
 				6DE0230619B6B6FB00889AD7 /* SBJsonUTF8Stream.m in Sources */,
 				6DA91DDF195C0C9900F2741A /* MKViewController.m in Sources */,
 				6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */,
+				968E269F1AED44F2006533E3 /* Utility.m in Sources */,
 				6DE0230119B6B6FB00889AD7 /* SBJsonStreamParserState.m in Sources */,
 				6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */,
 				968E26991ADEAC95006533E3 /* ChannelItem.m in Sources */,
