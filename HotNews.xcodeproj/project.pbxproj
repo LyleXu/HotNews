@@ -49,12 +49,12 @@
 		6DFBD53619C13C00005638A2 /* Image in Resources */ = {isa = PBXBuildFile; fileRef = 6DFBD53519C13C00005638A2 /* Image */; };
 		6DFBD53919C6E058005638A2 /* ChannelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53819C6E058005638A2 /* ChannelsViewController.m */; };
 		6DFBD53C19C7C9BC005638A2 /* ChannelAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */; };
-		6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBD53E19C7D234005638A2 /* SiteAddCell.m */; };
 		96106CD01A597370002BD7CC /* CatchWebContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96106CCF1A597370002BD7CC /* CatchWebContent.m */; };
 		968E26941ADD6240006533E3 /* ChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E26931ADD6240006533E3 /* ChannelCell.m */; };
 		968E26991ADEAC95006533E3 /* ChannelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E26981ADEAC95006533E3 /* ChannelItem.m */; };
 		968E269C1ADEB2D1006533E3 /* AddChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E269B1ADEB2D1006533E3 /* AddChannelViewController.m */; };
 		968E269F1AED44F2006533E3 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E269E1AED44F2006533E3 /* Utility.m */; };
+		968E26A61B0340B9006533E3 /* SiteAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 968E26A51B0340B9006533E3 /* SiteAddCell.m */; };
 		96923BBE1A4A85F00053B255 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96923BBB1A4A85F00053B255 /* libWeiboSDK.a */; };
 		96923BBF1A4A85F00053B255 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */; };
 		96F2D1191ADA954500137A38 /* ChannelIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F2D1181ADA954500137A38 /* ChannelIndexTableViewController.m */; };
@@ -145,8 +145,6 @@
 		6DFBD53819C6E058005638A2 /* ChannelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelsViewController.m; path = ../ChannelsViewController.m; sourceTree = "<group>"; };
 		6DFBD53A19C7C9BC005638A2 /* ChannelAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelAddViewController.h; sourceTree = "<group>"; };
 		6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelAddViewController.m; sourceTree = "<group>"; };
-		6DFBD53D19C7D234005638A2 /* SiteAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteAddCell.h; sourceTree = "<group>"; };
-		6DFBD53E19C7D234005638A2 /* SiteAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteAddCell.m; sourceTree = "<group>"; };
 		96106CCE1A597370002BD7CC /* CatchWebContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchWebContent.h; sourceTree = "<group>"; };
 		96106CCF1A597370002BD7CC /* CatchWebContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchWebContent.m; sourceTree = "<group>"; };
 		968E26921ADD6240006533E3 /* ChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelCell.h; sourceTree = "<group>"; };
@@ -157,6 +155,8 @@
 		968E269B1ADEB2D1006533E3 /* AddChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddChannelViewController.m; sourceTree = "<group>"; };
 		968E269D1AED44F2006533E3 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		968E269E1AED44F2006533E3 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		968E26A41B0340B9006533E3 /* SiteAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteAddCell.h; sourceTree = "<group>"; };
+		968E26A51B0340B9006533E3 /* SiteAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteAddCell.m; sourceTree = "<group>"; };
 		96923BBB1A4A85F00053B255 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = libWeiboSDK/libWeiboSDK.a; sourceTree = SOURCE_ROOT; };
 		96923BBC1A4A85F00053B255 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = SOURCE_ROOT; };
 		96923BBD1A4A85F00053B255 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = libWeiboSDK/WeiboSDK.h; sourceTree = SOURCE_ROOT; };
@@ -259,6 +259,7 @@
 		6DA91DCB195C0C9900F2741A /* HotNews */ = {
 			isa = PBXGroup;
 			children = (
+				968E26A01B033F7E006533E3 /* Discarded */,
 				6DFBD53519C13C00005638A2 /* Image */,
 				6DD241B219988AD300EECAA9 /* Icons */,
 				6DE022DD19B6B3A800889AD7 /* FromServer */,
@@ -283,10 +284,6 @@
 				6DD241BB199C557A00EECAA9 /* NewsDetailViewController.m */,
 				6DD241BD199C5CFE00EECAA9 /* CNewsInfo.h */,
 				6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */,
-				6DFBD53A19C7C9BC005638A2 /* ChannelAddViewController.h */,
-				6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */,
-				6DFBD53D19C7D234005638A2 /* SiteAddCell.h */,
-				6DFBD53E19C7D234005638A2 /* SiteAddCell.m */,
 				6D32F53C1A3955A8005E1349 /* LoginViewController.h */,
 				6D32F53D1A3955A8005E1349 /* LoginViewController.m */,
 				96106CCE1A597370002BD7CC /* CatchWebContent.h */,
@@ -381,6 +378,17 @@
 				6DE022FB19B6B6FB00889AD7 /* SBJsonWriter.m */,
 			);
 			name = SBJSON;
+			sourceTree = "<group>";
+		};
+		968E26A01B033F7E006533E3 /* Discarded */ = {
+			isa = PBXGroup;
+			children = (
+				968E26A41B0340B9006533E3 /* SiteAddCell.h */,
+				968E26A51B0340B9006533E3 /* SiteAddCell.m */,
+				6DFBD53A19C7C9BC005638A2 /* ChannelAddViewController.h */,
+				6DFBD53B19C7C9BC005638A2 /* ChannelAddViewController.m */,
+			);
+			name = Discarded;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,7 +502,6 @@
 				6DE0230019B6B6FB00889AD7 /* SBJsonStreamParserAdapter.m in Sources */,
 				6DE0230619B6B6FB00889AD7 /* SBJsonUTF8Stream.m in Sources */,
 				6DA91DDF195C0C9900F2741A /* MKViewController.m in Sources */,
-				6DFBD53F19C7D234005638A2 /* SiteAddCell.m in Sources */,
 				968E269F1AED44F2006533E3 /* Utility.m in Sources */,
 				6DE0230119B6B6FB00889AD7 /* SBJsonStreamParserState.m in Sources */,
 				6DD241BC199C557A00EECAA9 /* NewsDetailViewController.m in Sources */,
@@ -520,6 +527,7 @@
 				6DE022FF19B6B6FB00889AD7 /* SBJsonStreamParserAccumulator.m in Sources */,
 				96F2D1191ADA954500137A38 /* ChannelIndexTableViewController.m in Sources */,
 				6DE022FC19B6B6FB00889AD7 /* NSObject+SBJson.m in Sources */,
+				968E26A61B0340B9006533E3 /* SiteAddCell.m in Sources */,
 				6DE022E019B6B4AD00889AD7 /* DataLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
