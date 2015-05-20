@@ -13,9 +13,13 @@
 
 -(NSMutableArray*)sectionData
 {
+    NSTimeInterval time=[[NSDate date] timeIntervalSince1970]*1000;
+    NSDateFormatter *dateToStringFormatter=[[NSDateFormatter alloc] init];
+    [dateToStringFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
     if(_sectionData == nil)
     {
-        _sectionData =  [DataLayer GetNewsByChannel:self.currentChannel.link timestamp:@""];
+        _sectionData =  [DataLayer GetNewsByChannel:self.currentChannel.link timestamp:[dateToStringFormatter stringFromDate:[NSDate date]]];
     }
     
 //    if (_sectionData == nil || _sectionData.count == 0) {

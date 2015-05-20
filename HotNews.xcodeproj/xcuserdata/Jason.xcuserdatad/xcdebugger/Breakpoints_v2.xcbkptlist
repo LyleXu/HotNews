@@ -808,11 +808,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HotNews/SingleSiteViewController.m"
-            timestampString = "453797892.009898"
+            timestampString = "453798865.231878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "-sectionData"
             landmarkType = "5">
          </BreakpointContent>
@@ -888,11 +888,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HotNews/SingleSiteViewController.m"
-            timestampString = "453797892.009898"
+            timestampString = "453798865.231878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "-sectionData"
             landmarkType = "5">
          </BreakpointContent>
