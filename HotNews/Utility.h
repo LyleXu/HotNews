@@ -14,6 +14,4 @@
 + (NSMutableArray*) builtInChannel;
 + (NSMutableArray*) memoryChannel;
 + (BOOL *) isAlreadyExist: (NSString*)title;
-
-@property NSMutableArray* _builtInChannel;
 @end

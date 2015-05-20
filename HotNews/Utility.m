@@ -13,7 +13,7 @@
 +(NSMutableArray*)builtInChannel
 {
     NSMutableArray *_builtInChannel = [NSMutableArray new];
-    _builtInChannel =[NSMutableArray array];
+//    _builtInChannel =[NSMutableArray array];
     
     ChannelItem* channel1 = [ChannelItem new];
     channel1.title = @"cnBeta";
@@ -32,6 +32,29 @@
     [_builtInChannel addObject:channel3];
     
     return _builtInChannel;
+}
+
++(NSMutableArray*)serverChannel
+{
+    NSMutableArray *_serverChannel = [NSMutableArray new];
+    
+    ChannelItem* channel1 = [ChannelItem new];
+    channel1.title = @"cnBeta";
+    channel1.link = @"http://www.cnbeta.com/articles/345753.htm";
+    
+    ChannelItem* channel2 = [ChannelItem new];
+    channel2.title = @"威锋网";
+    channel2.link = @"http://www.cnbeta.com/articles/345753.htm";
+    
+    ChannelItem* channel3 = [ChannelItem new];
+    channel3.title = @"博客园";
+    channel3.link = @"http://www.cnbeta.com/articles/345753.htm";
+    
+    [_serverChannel addObject:channel1];
+    [_serverChannel addObject:channel2];
+    [_serverChannel addObject:channel3];
+    
+    return _serverChannel;
 }
 
 +(NSMutableArray*) memoryChannel{

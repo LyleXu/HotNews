@@ -13,4 +13,5 @@
 @property(nonatomic,retain)NSString *title;
 @property(nonatomic,retain) NSString *link;
 
+-(void) Parse:(NSDictionary*) data;
 @end

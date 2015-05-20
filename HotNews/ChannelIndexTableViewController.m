@@ -7,9 +7,6 @@
 //
 
 #import "ChannelIndexTableViewController.h"
-#import "SingleSiteViewController.h"
-#import "ChannelCell.h"
-#import "ChannelItem.h"
 
 @implementation ChannelIndexTableViewController
 @synthesize channelData = _channelData;
@@ -22,11 +19,13 @@
     if (self.isLoaded == NO) {
         _channelData = [NSMutableArray new];
     
-        if (Utility.builtInChannel !=nil && Utility.builtInChannel.count>0) {
-            for (ChannelItem *builtInItem in Utility.builtInChannel) {
-                [_channelData addObject:builtInItem];
-            }
-        }
+//        if (Utility.builtInChannel !=nil && Utility.builtInChannel.count>0) {
+//            for (ChannelItem *builtInItem in Utility.builtInChannel) {
+//                [_channelData addObject:builtInItem];
+//            }
+//        }
+        
+        _channelData = [DataLayer GetAllChannels:@"0" count:@""];
         
         if ([Utility memoryChannel] !=nil && [Utility memoryChannel].count >0) {
             for (ChannelItem *item in [Utility memoryChannel]) {
@@ -82,7 +81,6 @@
     self.isLoaded = NO;
     return [self.channelData count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -7,8 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ChannelCell.h"
+#import "SBJson.h"
+#import "Constraint.h"
+#import "CNewsInfo.h"
+#import "ChannelItem.h"
 
 @interface DataLayer : NSObject
 + (NSMutableArray*) GetAllNews:(NSString*)rssUrl maxRequiredCount:(NSString*)maxCount;
 +(NSString*)GetRssContentByUrl:(NSString*)url;
++(NSMutableArray*) GetAllChannels:(NSString*)offset
+                            count:(NSString*)count;
 @end

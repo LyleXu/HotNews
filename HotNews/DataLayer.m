@@ -7,9 +7,6 @@
 //
 
 #import "DataLayer.h"
-#import "SBJson.h"
-#import "Constraint.h"
-#import "CNewsInfo.h"
 
 @implementation DataLayer
 + (NSString*) GetJsonString:(NSString*)serviceName
@@ -27,6 +24,29 @@
     return jsonString;
 }
 
+//Array of CBook
++ (NSMutableArray*) GetAllChannels:(NSString*)offset
+                          count:(NSString*)count
+{
+    NSArray* parameters = [NSArray arrayWithObjects: offset, count, nil];
+    NSDictionary* result = [self FetchData:@"ChannelService" methodName:@"GetAllChannels" parameters:parameters];
+    NSDictionary* datas = [result valueForKey:@"channels"];
+    
+    NSMutableArray *AllChannels = [NSMutableArray array];
+    
+    if([datas count])
+    {
+        for (NSDictionary *data in [datas allValues]) {
+            ChannelItem* channel = [ChannelItem new];
+            [channel Parse:data];
+            [AllChannels addObject:channel];
+        }
+    }
+    
+    //return [AllChannels copy];
+    return AllChannels;
+}
+
 
 + (NSDictionary*) FetchData:(NSString*)serviceName
                  methodName:(NSString*)methodName
@@ -37,7 +57,7 @@
     NSString* jsonString = [self GetJsonString:serviceName methodName:methodName parameters:parameters];
     NSLog(@"%@",jsonString);
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    
+
     NSString* serverURL = [[NSString alloc] initWithFormat:@"%@%@",ServerHost,ServiceAddress];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:serverURL]];
     [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -74,7 +94,7 @@
 +(NSString*)GetRssContentByUrl:(NSString*)url
 {
     NSArray* parameters = [NSArray arrayWithObjects: url, nil];
-    NSDictionary* result = [self FetchData:@"RssService" methodName:@"GetRssContentByUrl" parameters:parameters];
+    NSDictionary* result = [self FetchData:@"RssNewsService" methodName:@"GetRssContentByUrl" parameters:parameters];
     NSString* rssContent = [result valueForKey:@"rss"];
     
     return rssContent;

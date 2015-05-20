@@ -25,4 +25,11 @@
     }
     return  self;
 }
+
+-(void) Parse:(NSDictionary*) data
+{
+    self.title = [data objectForKey:@"name"] != [NSNull null] ? [[data objectForKey:@"name"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] : nil;
+    self.link = [data objectForKey:@"url"] != [NSNull null] ? [data objectForKey:@"url"] : nil;
+}
+
 @end
