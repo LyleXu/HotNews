@@ -64,6 +64,13 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     SingleSiteViewController *controller = segue.destinationViewController;
+    
+    NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
+    ChannelItem* selectedChannel = nil;
+    if(indexPath != nil)
+        selectedChannel = self.channelData[indexPath.row];
+    
+    controller.currentChannel = selectedChannel;
 }
 
 - (void)viewDidUnload
@@ -93,6 +100,8 @@
     
     CNewsInfo* news = [self.channelData objectAtIndex:indexPath.row];
     cell.lblTitle.text = news.title;
+    
+    self.selChannelUrl = news.link;
     
     return cell;
 }

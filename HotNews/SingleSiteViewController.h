@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CNewsInfo.h"
+#import "NewsDetailViewController.h"
+#import "DataLayer.h"
+#import "ChannelItem.h"
 
 @interface SingleSiteViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
-@property (strong, nonatomic) NSString *iconPath;
 @property (nonatomic,strong) NSMutableArray * sectionData;
+@property(nonatomic,retain) ChannelItem *currentChannel;
 @end

@@ -70,7 +70,7 @@
     
     if (selectedIndexPath.row != self.photosList.count - 1) {
         SingleSiteViewController *controller = segue.destinationViewController;
-        controller.iconPath = [[self photosDirectory] stringByAppendingPathComponent:iconName];
+        //controller.iconPath = [[self photosDirectory] stringByAppendingPathComponent:iconName];
     }
 }
 

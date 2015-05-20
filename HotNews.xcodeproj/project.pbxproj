@@ -280,8 +280,6 @@
 				6DD241BE199C5CFE00EECAA9 /* CNewsInfo.m */,
 				6D32F53C1A3955A8005E1349 /* LoginViewController.h */,
 				6D32F53D1A3955A8005E1349 /* LoginViewController.m */,
-				96106CCE1A597370002BD7CC /* CatchWebContent.h */,
-				96106CCF1A597370002BD7CC /* CatchWebContent.m */,
 				968E26921ADD6240006533E3 /* ChannelCell.h */,
 				968E26931ADD6240006533E3 /* ChannelCell.m */,
 				968E26971ADEAC95006533E3 /* ChannelItem.h */,
@@ -377,6 +375,8 @@
 		968E26A01B033F7E006533E3 /* Discarded */ = {
 			isa = PBXGroup;
 			children = (
+				96106CCE1A597370002BD7CC /* CatchWebContent.h */,
+				96106CCF1A597370002BD7CC /* CatchWebContent.m */,
 				6DFBD53719C6E058005638A2 /* ChannelsViewController.h */,
 				6DFBD53819C6E058005638A2 /* ChannelsViewController.m */,
 				6DD241C019A1D86200EECAA9 /* MKPhotoCell.h */,

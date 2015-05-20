@@ -15,6 +15,7 @@
 
 @interface ChannelIndexTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSMutableArray * channelData;
+@property (nonatomic,strong) NSString * selChannelUrl;
 
 @property (nonatomic, assign) BOOL isLoaded;
 @end

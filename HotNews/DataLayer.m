@@ -71,11 +71,11 @@
 }
 
 //Array of CNewsInfo
-+ (NSMutableArray*) GetAllNews:(NSString*)rssUrl maxRequiredCount:(NSString*)maxCount
++ (NSMutableArray*) GetNewsByChannel:(NSString*)rssUrl timestamp:(NSString*)timestamp
 {
-    NSArray* parameters = [NSArray arrayWithObjects: rssUrl, maxCount, nil];
-    NSDictionary* result = [self FetchData:@"RssService" methodName:@"GetRssFeeds" parameters:parameters];
-    NSDictionary* datas = [result valueForKey:@"rss"];
+    NSArray* parameters = [NSArray arrayWithObjects: rssUrl, @"", nil];
+    NSDictionary* result = [self FetchData:@"RssNewsService" methodName:@"GetRssNewsByChannel" parameters:parameters];
+    NSDictionary* datas = [result valueForKey:@"rssNews"];
     
     NSMutableArray *AllNews = [NSMutableArray array];
     
