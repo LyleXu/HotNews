@@ -65,12 +65,14 @@
 {
     SingleSiteViewController *controller = segue.destinationViewController;
     
-    NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
-    ChannelItem* selectedChannel = nil;
-    if(indexPath != nil)
-        selectedChannel = self.channelData[indexPath.row];
+    if ([segue.identifier isEqualToString:@"ToSingleChannel"]) {
+        NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
+        ChannelItem* selectedChannel = nil;
+        if(indexPath != nil)
+            selectedChannel = self.channelData[indexPath.row];
     
-    controller.currentChannel = selectedChannel;
+        controller.currentChannel = selectedChannel;
+    }
 }
 
 - (void)viewDidUnload
