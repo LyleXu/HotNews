@@ -11,16 +11,16 @@
 
 @interface Utility : UIViewController
 
-+ (NSMutableArray*) builtInChannel;
-+ (NSMutableArray*) memoryChannel;
-+ (BOOL *) IsAlreadyExist: (NSString*)title;
-+ (NSMutableArray*) GetChannelsListCache;
-+ (void) UpdateChannelsListCache: (NSMutableArray*)list;
-//+ (NSMutableArray*) GetChannelNewsCache: (NSString*) channelName;
-+ (void) SetChannelNewsCache: (NSString*) channelName
-                              list:(NSMutableArray*) list;
-+ (NSDate*) GetLastUpdateDateFromChannelName: (NSString*) channelName;
-+ (NSDate*) GetCurrentDate;
++ (BOOL*) IsAlreadyExist: (NSString*)title;
 + (bool*) IsNewsListOutdate: (NSString*) channelName;
+
++ (NSDate*) GetCurrentDate;
++ (NSDate*) GetLastUpdateDateFromChannelName: (NSString*) channelName;
++ (NSMutableArray*) GetChannelsListCache;
 + (NSMutableArray*) GetCacheByName: (NSString*) cacheName;
++ (NSMutableArray*) GetCustomizedChannel;
+
++ (void) UpdateChannelsListCache: (NSMutableArray*)list;
++ (void) SetChannelNewsCache: (NSString*) channelName
+                        list:(NSMutableArray*) list;
 @end

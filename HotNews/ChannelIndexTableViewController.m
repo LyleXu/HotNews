@@ -18,18 +18,10 @@
 
     if (self.isLoaded == NO) {
         _channelData = [NSMutableArray new];
-    
-//        if (Utility.builtInChannel !=nil && Utility.builtInChannel.count>0) {
-//            for (ChannelItem *builtInItem in Utility.builtInChannel) {
-//                [_channelData addObject:builtInItem];
-//            }
-//        }
         
         _channelData = [DataLayer GetAllChannels:@"" count:@""];
-        if ([Utility memoryChannel] !=nil && [Utility memoryChannel].count >0) {
-            for (ChannelItem *item in [Utility memoryChannel]) {
-                [_channelData addObject:item];
-            }
+        for (ChannelItem *item in [Utility GetCustomizedChannel]) {
+            [_channelData addObject:item];
         }
         
         self.isLoaded = YES;
