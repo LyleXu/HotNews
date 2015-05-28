@@ -12,6 +12,7 @@
 
 @property(nonatomic,retain)NSString *title;
 @property(nonatomic,retain) NSString *link;
+@property(nonatomic,retain) NSDate *lastUpdateDate;
 
 -(void) Parse:(NSDictionary*) data;
 @end

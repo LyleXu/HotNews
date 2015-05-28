@@ -18,4 +18,6 @@
 +(NSString*)GetRssContentByUrl:(NSString*)url;
 +(NSMutableArray*) GetAllChannels:(NSString*)offset
                             count:(NSString*)count;
+
++(NSString*)GetRssContentByTitle:(NSString*)title;
 @end

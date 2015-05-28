@@ -100,4 +100,13 @@
     return rssContent;
 }
 
++(NSString*)GetRssContentByTitle:(NSString*)title
+{
+    NSArray* parameters = [NSArray arrayWithObjects: title, nil];
+    NSDictionary* result = [self FetchData:@"RssNewsService" methodName:@"GetRssContentByTitle" parameters:parameters];
+    NSString* rssContent = [result valueForKey:@"content"];
+    
+    return rssContent;
+}
+
 @end

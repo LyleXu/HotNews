@@ -15,9 +15,7 @@
 
 -(NSMutableArray*)Channels{
     if (_channels == nil) {
-        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-        NSData* data  = [[NSUserDefaults standardUserDefaults] objectForKey:@"SelectedChannels"];
-        _channels = [[NSKeyedUnarchiver unarchiveObjectWithData:data] mutableCopy];
+        _channels = [Utility GetCacheByName:@"SelectedChannels"];
     }
     
     return _channels;
@@ -41,8 +39,9 @@
     ChannelItem *c = [ChannelItem new];
     c.title = self.txtChannelName.text;
     c.link = self.txtChannelUrl.text;
+    c.lastUpdateDate = nil;
     
-    if ([Utility isAlreadyExist: c.title]) {
+    if ([Utility IsAlreadyExist: c.title]) {
         NSString* warningMSG = [NSString stringWithFormat:@"The channel [%@] is already exist!", c.title];
         UIAlertView *alertWarning = [[UIAlertView alloc] initWithTitle:@"" message: warningMSG delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertWarning show];

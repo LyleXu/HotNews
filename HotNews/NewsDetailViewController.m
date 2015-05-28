@@ -30,7 +30,8 @@
 {
     [super viewDidLoad];
     
-    NSString * targetWebContent = [DataLayer GetRssContentByUrl:newsInfo.link];
+    //NSString * targetWebContent = [DataLayer GetRssContentByUrl:newsInfo.link];
+    NSString * targetWebContent = [DataLayer GetRssContentByTitle:newsInfo.title];
     [self.webView loadHTMLString:targetWebContent baseURL:nil];
 }
 @end

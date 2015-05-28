@@ -25,8 +25,7 @@
 //            }
 //        }
         
-        _channelData = [DataLayer GetAllChannels:@"0" count:@""];
-        
+        _channelData = [DataLayer GetAllChannels:@"" count:@""];
         if ([Utility memoryChannel] !=nil && [Utility memoryChannel].count >0) {
             for (ChannelItem *item in [Utility memoryChannel]) {
                 [_channelData addObject:item];

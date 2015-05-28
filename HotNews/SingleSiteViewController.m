@@ -13,13 +13,15 @@
 
 -(NSMutableArray*)sectionData
 {
-    NSTimeInterval time=[[NSDate date] timeIntervalSince1970]*1000;
-    NSDateFormatter *dateToStringFormatter=[[NSDateFormatter alloc] init];
-    [dateToStringFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString* channelTitle = self.currentChannel.title;
+    NSDate* currentDate = [Utility GetCurrentDate];
+    _sectionData = [Utility GetCacheByName:channelTitle];
     
-    if(_sectionData == nil)
+    NSDate* latestUpdateDate = [Utility GetLastUpdateDateFromChannelName: channelTitle];
+    if(_sectionData == nil || [Utility IsNewsListOutdate:channelTitle])
     {
-        _sectionData =  [DataLayer GetNewsByChannel:self.currentChannel.link timestamp:[dateToStringFormatter stringFromDate:[NSDate date]]];
+        _sectionData =  [DataLayer GetNewsByChannel:self.currentChannel.link timestamp:currentDate];
+        [Utility SetChannelNewsCache:channelTitle list:_sectionData];
     }
     
 //    if (_sectionData == nil || _sectionData.count == 0) {

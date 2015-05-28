@@ -15,6 +15,7 @@
 {
     [encoder encodeObject:self.title forKey:@"title"];
     [encoder encodeObject:self.link forKey:@"link"];
+    [encoder encodeObject:self.lastUpdateDate forKey:@"lastUpdateDate"];
 }
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -22,6 +23,7 @@
     {
         self.title = [decoder decodeObjectForKey:@"title"];
         self.link = [decoder decodeObjectForKey:@"link"];
+        self.lastUpdateDate = [decoder decodeObjectForKey:@"lastUpdateDate"];
     }
     return  self;
 }
@@ -30,6 +32,7 @@
 {
     self.title = [data objectForKey:@"name"] != [NSNull null] ? [[data objectForKey:@"name"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] : nil;
     self.link = [data objectForKey:@"url"] != [NSNull null] ? [data objectForKey:@"url"] : nil;
+    self.lastUpdateDate = [data objectForKey:@"lastUpdateDate"] != [NSNull null] ? [data objectForKey:@"lastUpdateDate"] : nil;
 }
 
 @end

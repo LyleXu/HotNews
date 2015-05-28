@@ -13,5 +13,14 @@
 
 + (NSMutableArray*) builtInChannel;
 + (NSMutableArray*) memoryChannel;
-+ (BOOL *) isAlreadyExist: (NSString*)title;
++ (BOOL *) IsAlreadyExist: (NSString*)title;
++ (NSMutableArray*) GetChannelsListCache;
++ (void) UpdateChannelsListCache: (NSMutableArray*)list;
+//+ (NSMutableArray*) GetChannelNewsCache: (NSString*) channelName;
++ (void) SetChannelNewsCache: (NSString*) channelName
+                              list:(NSMutableArray*) list;
++ (NSDate*) GetLastUpdateDateFromChannelName: (NSString*) channelName;
++ (NSDate*) GetCurrentDate;
++ (bool*) IsNewsListOutdate: (NSString*) channelName;
++ (NSMutableArray*) GetCacheByName: (NSString*) cacheName;
 @end
