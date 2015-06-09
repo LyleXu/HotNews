@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ChannelItem.h"
+#import "Constraint.h"
+#import "CNewsInfo.h"
 
 @interface Utility : UIViewController
 
@@ -16,11 +18,11 @@
 
 + (NSDate*) GetCurrentDate;
 + (NSDate*) GetLastUpdateDateFromChannelName: (NSString*) channelName;
-+ (NSMutableArray*) GetChannelsListCache;
-+ (NSMutableArray*) GetCacheByName: (NSString*) cacheName;
++ (NSMutableArray*) GetCachedNewsListByChanelName: (NSString*) channelName;
 + (NSMutableArray*) GetCustomizedChannel;
 
-+ (void) UpdateChannelsListCache: (NSMutableArray*)list;
-+ (void) SetChannelNewsCache: (NSString*) channelName
++ (void) UpdateLatestTimeByName: (NSString*)name;
++ (void) SetCachedNewsList: (NSString*) channelName
                         list:(NSMutableArray*) list;
++ (void) SetCachedChannelList:(NSMutableArray*) list;
 @end

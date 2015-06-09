@@ -15,13 +15,17 @@
 {
     NSString* channelTitle = self.currentChannel.title;
     NSDate* currentDate = [Utility GetCurrentDate];
-    _sectionData = [Utility GetCacheByName:channelTitle];
+    _sectionData = [Utility GetCachedNewsListByChanelName:channelTitle];
     
     NSDate* latestUpdateDate = [Utility GetLastUpdateDateFromChannelName: channelTitle];
     if(_sectionData == nil || [Utility IsNewsListOutdate:channelTitle])
     {
-        _sectionData =  [DataLayer GetNewsByChannel:self.currentChannel.link timestamp:currentDate];
-        [Utility SetChannelNewsCache:channelTitle list:_sectionData];
+        NSLog(self.currentChannel.link);
+        
+        _sectionData =  [DataLayer GetNewsByChannel:self.currentChannel.title timestamp:currentDate];
+        
+        [Utility SetCachedNewsList:channelTitle list:_sectionData];
+        [Utility UpdateLatestTimeByName:channelTitle];
     }
     
 //    if (_sectionData == nil || _sectionData.count == 0) {

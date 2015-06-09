@@ -71,9 +71,9 @@
 }
 
 //Array of CNewsInfo
-+ (NSMutableArray*) GetNewsByChannel:(NSString*)rssUrl timestamp:(NSString*)timestamp
++ (NSMutableArray*) GetNewsByChannel:(NSString*)rssTitle timestamp:(NSString*)timestamp
 {
-    NSArray* parameters = [NSArray arrayWithObjects: rssUrl, @"", nil];
+    NSArray* parameters = [NSArray arrayWithObjects: rssTitle, @"", nil];
     NSDictionary* result = [self FetchData:@"RssNewsService" methodName:@"GetRssNewsByChannel" parameters:parameters];
     NSDictionary* datas = [result valueForKey:@"rssNews"];
     

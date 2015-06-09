@@ -10,15 +10,11 @@
 #define GTCCLibrary_Constraint_h
 
 #define USERNAME    @"USERNAME"
-//#define ServerHost @"http://192.168.1.103:8080/hotnews/"
-#define ServerHost @"http://cn-xul2-1.ap.uis.unisys.com:8080/"
 //#define ServerHost @"http://129.223.252.203:8080/"
-//#define ServerHost @"http://129.223.252.236/gtcclibrary/"
-//#define ServerHost @"http://129.223.252.205:8080/gtcclibrary/"
-//#define ServerHost @"http://129.223.252.146:8090/gtcclibrary/"
-
+#define ServerHost @"http://cn-xul2-1.ap.uis.unisys.com:8080/"
 #define ServiceAddress @"hotnews/amfphp/"
 #define ServerImagePath @"Images/"
-#define SecondsIntervalLimited (60*30);
+#define SecondsIntervalLimited 60*30;
+#define ChannelsListCacheKey @"ChannelsList"
 
 #endif

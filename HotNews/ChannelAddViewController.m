@@ -16,12 +16,7 @@
 
 -(NSMutableArray*)addedSites
 {
-    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    if (_addedSites == nil) {
-        _addedSites = [[defaults objectForKey:@"addedSites"] mutableCopy];
-    }
-    
-    return _addedSites;
+    return [Utility GetCachedNewsListByChanelName:@"addedSites"];
 }
 
 - (void)AddSiteIntoMemory: (NSString *)siteName
@@ -31,18 +26,15 @@
     }
     
     [self.addedSites addObject: siteName];
-    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setObject: [self.addedSites copy] forKey:@"addedSites"];
-    [defaults synchronize];
+    [Utility SetCachedNewsList:@"addedSites" list:self.addedSites];
 }
 
 - (void)RemoveSiteFromMemory: (NSString *)siteName
 {
     if ([self.addedSites containsObject: siteName]) {
         [self.addedSites removeObject: siteName];
-        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-        [defaults setObject: [self.addedSites copy] forKey:@"addedSites"];
-        [defaults synchronize];
+        
+        [Utility SetCachedNewsList:@"addedSites" list:self.addedSites];
     }
 }
 

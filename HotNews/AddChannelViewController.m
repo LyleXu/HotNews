@@ -15,7 +15,7 @@
 
 -(NSMutableArray*)Channels{
     if (_channels == nil) {
-        _channels = [Utility GetCacheByName:@"SelectedChannels"];
+        _channels = [Utility GetCachedNewsListByChanelName:@"SelectedChannels"];
     }
     
     return _channels;
@@ -28,10 +28,7 @@
     }
     
     [self.Channels addObject: c];
-    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:self.Channels] forKey:@"SelectedChannels"];
-    
-    [defaults synchronize];
+    [Utility SetCachedNewsList:@"SelectedChannels" list:self.Channels];
 }
 
 -(IBAction)addChannelBtn:(id)sender

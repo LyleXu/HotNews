@@ -10,6 +10,24 @@
 
 @implementation CNewsInfo
 @synthesize title,link,description;
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+    [encoder encodeObject:self.title forKey:@"title"];
+    [encoder encodeObject:self.link forKey:@"link"];
+    [encoder encodeObject:self.description forKey:@"description"];
+}
+- (id)initWithCoder:(NSCoder *)decoder
+{
+    if(self = [super init])
+    {
+        self.title = [decoder decodeObjectForKey:@"title"];
+        self.link = [decoder decodeObjectForKey:@"link"];
+        self.description = [decoder decodeObjectForKey:@"description"];
+    }
+    return  self;
+}
+
 -(void) Parse:(NSDictionary*) data
 {
     self.title = [data objectForKey:@"title"] != [NSNull null] ? [[data objectForKey:@"title"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] : nil;

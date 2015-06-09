@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Utility.h"
 
 @interface ChannelAddViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSArray * allSites;

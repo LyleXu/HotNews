@@ -14,7 +14,7 @@
 #import "ChannelItem.h"
 
 @interface DataLayer : NSObject
-+ (NSMutableArray*) GetNewsByChannel:(NSString*)rssUrl timestamp:(NSString*)timestamp;
++ (NSMutableArray*) GetNewsByChannel:(NSString*)rssTitle timestamp:(NSString*)timestamp;
 +(NSString*)GetRssContentByUrl:(NSString*)url;
 +(NSMutableArray*) GetAllChannels:(NSString*)offset
                             count:(NSString*)count;

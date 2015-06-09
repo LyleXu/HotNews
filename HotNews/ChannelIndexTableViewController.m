@@ -20,9 +20,9 @@
         _channelData = [NSMutableArray new];
         
         _channelData = [DataLayer GetAllChannels:@"" count:@""];
-        for (ChannelItem *item in [Utility GetCustomizedChannel]) {
-            [_channelData addObject:item];
-        }
+//        for (ChannelItem *item in [Utility GetCustomizedChannel]) {
+//            [_channelData addObject:item];
+//        }
         
         self.isLoaded = YES;
     }
@@ -72,13 +72,12 @@
     self.channelData = nil;
 }
 
-- (BOOL)shouldAutorotate
-{
+- (BOOL)shouldAutorotate{
     return NO;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    self.isLoaded = NO;
+//    self.isLoaded = NO;
     return [self.channelData count];
 }
 
