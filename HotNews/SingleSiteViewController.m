@@ -11,9 +11,10 @@
 @implementation SingleSiteViewController
 @synthesize sectionData = _sectionData;
 
--(NSMutableArray*)sectionData
-{
+-(NSMutableArray*)sectionData{
 //    [Utility ClearAllCache];
+    if (_sectionData != nil)
+        return _sectionData;
     
     NSString* channelTitle = self.currentChannel.title;
     NSDate* currentDate = [Utility GetCurrentDate];

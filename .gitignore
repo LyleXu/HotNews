@@ -14,3 +14,7 @@ HotNews.xcodeproj/project.xcworkspace/xcuserdata/jason.xcuserdatad/UserInterface
 HotNews.xcodeproj/project.xcworkspace/xcuserdata/jason.xcuserdatad/UserInterfaceState.xcuserstate
 
 *.xcsettings
+
+*.xcbkptlist
+
+HotNews.xcodeproj/xcuserdata/Jason.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
