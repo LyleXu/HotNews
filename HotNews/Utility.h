@@ -20,9 +20,13 @@
 + (NSDate*) GetLastUpdateDateFromChannelName: (NSString*) channelName;
 + (NSMutableArray*) GetCachedNewsListByChanelName: (NSString*) channelName;
 + (NSMutableArray*) GetCustomizedChannel;
++ (NSString*) GetStringFromDate: (NSDate*) date;
 
 + (void) UpdateLatestTimeByName: (NSString*)name;
 + (void) SetCachedNewsList: (NSString*) channelName
                         list:(NSMutableArray*) list;
 + (void) SetCachedChannelList:(NSMutableArray*) list;
+
++ (void) ClearAllCache;
++ (void) RemoveCacheFromName: (NSString*) cacheName;
 @end

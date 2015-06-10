@@ -13,17 +13,9 @@
 
 -(NSMutableArray*)channelData
 {
-//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"SelectedChannels"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-
+//    [Utility ClearAllCache];
     if (self.isLoaded == NO) {
-        _channelData = [NSMutableArray new];
-        
         _channelData = [DataLayer GetAllChannels:@"" count:@""];
-//        for (ChannelItem *item in [Utility GetCustomizedChannel]) {
-//            [_channelData addObject:item];
-//        }
-        
         self.isLoaded = YES;
     }
     
@@ -77,7 +69,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    self.isLoaded = NO;
     return [self.channelData count];
 }
 
@@ -92,7 +83,6 @@
     
     CNewsInfo* news = [self.channelData objectAtIndex:indexPath.row];
     cell.lblTitle.text = news.title;
-    
     self.selChannelUrl = news.link;
     
     return cell;

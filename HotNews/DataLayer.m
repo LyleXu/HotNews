@@ -24,7 +24,6 @@
     return jsonString;
 }
 
-//Array of CBook
 + (NSMutableArray*) GetAllChannels:(NSString*)offset
                           count:(NSString*)count
 {
@@ -43,7 +42,6 @@
         }
     }
     
-    //return [AllChannels copy];
     return AllChannels;
 }
 
@@ -70,15 +68,14 @@
     return jsonDictionaryResponse;
 }
 
-//Array of CNewsInfo
-+ (NSMutableArray*) GetNewsByChannel:(NSString*)rssTitle timestamp:(NSString*)timestamp
++ (NSMutableArray*) GetNewsByChannel:(NSString*)rssTitle timestamp:(NSDate*)timestamp
 {
-    NSArray* parameters = [NSArray arrayWithObjects: rssTitle, @"", nil];
+    NSString* dateStr = [Utility GetStringFromDate:timestamp];
+    NSArray* parameters = [NSArray arrayWithObjects: rssTitle, dateStr, nil];
     NSDictionary* result = [self FetchData:@"RssNewsService" methodName:@"GetRssNewsByChannel" parameters:parameters];
     NSDictionary* datas = [result valueForKey:@"rssNews"];
     
     NSMutableArray *AllNews = [NSMutableArray array];
-    
     if([datas count])
     {
         for (NSDictionary *data in [datas allValues]) {

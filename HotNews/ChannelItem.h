@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ChannelItem : NSObject
+@interface ChannelItem : NSObject<NSCoding>
 
 @property(nonatomic,retain)NSString *title;
 @property(nonatomic,retain) NSString *link;

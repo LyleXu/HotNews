@@ -12,9 +12,10 @@
 #import "Constraint.h"
 #import "CNewsInfo.h"
 #import "ChannelItem.h"
+#import "Utility.h"
 
 @interface DataLayer : NSObject
-+ (NSMutableArray*) GetNewsByChannel:(NSString*)rssTitle timestamp:(NSString*)timestamp;
++ (NSMutableArray*) GetNewsByChannel:(NSString*)rssTitle timestamp:(NSDate*)timestamp;
 +(NSString*)GetRssContentByUrl:(NSString*)url;
 +(NSMutableArray*) GetAllChannels:(NSString*)offset
                             count:(NSString*)count;

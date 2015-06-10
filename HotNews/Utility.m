@@ -25,7 +25,7 @@
     BOOL* isOutdate = true;
     NSMutableArray* channelList = [Utility GetCustomizedChannel];
     for (ChannelItem *item in channelList) {
-        if (item.title == channelName) {
+        if ([item.title isEqualToString: channelName]) {
             return [item.lastUpdateDate timeIntervalSinceNow] > 60*30;
         }
     }
@@ -34,36 +34,17 @@
 }
 
 +(NSMutableArray*) GetCustomizedChannel{
-    NSMutableArray* list = [NSMutableArray new];
-    NSArray* resultArray = [[NSUserDefaults standardUserDefaults] objectForKey:ChannelsListCacheKey];
-    for (NSData* data in resultArray) {
-        ChannelItem* channelInfo = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        [list addObject:channelInfo];
-    }
-    
-    return list;
+    NSData* result = [[NSUserDefaults standardUserDefaults] objectForKey:ChannelsListCacheKey];
+    NSArray* list = [NSKeyedUnarchiver unarchiveObjectWithData:result];
+    return list == nil ? [NSMutableArray new] : [list mutableCopy];
 }
 
-//Get cached array based on cacheName
 + (NSMutableArray*) GetCachedNewsListByChanelName: (NSString*) channelName{
-//    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    
-    NSMutableArray* list = [NSMutableArray new];
-    NSArray* resultArray = [[NSUserDefaults standardUserDefaults] objectForKey:channelName];
-    for (NSData* data in resultArray) {
-        CNewsInfo* newsInfo = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        [list addObject:newsInfo];
-    }
-    
-    return list;
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSArray* myList = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:channelName]];
+    return myList == nil? [NSMutableArray new]:[myList mutableCopy];
 }
 
-//
-//+ (NSMutableArray*) GetCacheByName2: (NSString*) cacheName{
-//}
-
-
-//Get the latest updating date according to channel name
 + (NSDate*) GetLastUpdateDateFromChannelName: (NSString*) channelName{
     NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
     [dateFormater setDateFormat:@"yyyy-MM-DD HH:mm:ss"];
@@ -71,7 +52,7 @@
     
     NSMutableArray* channelsList = [Utility GetCustomizedChannel];
     for (ChannelItem* item in channelsList) {
-        if (item.title == channelName) {
+        if ([item.title isEqualToString: channelName]) {
             if (item.lastUpdateDate != nil) {
                 latestDate = item.lastUpdateDate;
             }
@@ -83,12 +64,20 @@
     return latestDate;
 }
 
-//Get current date
 + (NSDate*) GetCurrentDate{
     NSDate *date = [NSDate date];
-    NSInteger interval = [[NSTimeZone systemTimeZone] secondsFromGMTForDate: date];
+//    NSInteger interval = [[NSTimeZone systemTimeZone] secondsFromGMTForDate: date];
     
-    return [date  dateByAddingTimeInterval: interval];
+    //return [date dateByAddingTimeInterval: interval];
+    return date;
+}
+
++ (NSString*) GetStringFromDate: (NSDate*) date{
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *destDateString = [dateFormatter stringFromDate:date];
+    
+    return destDateString;
 }
 
 //Restore back current array into cache
@@ -97,51 +86,50 @@
     NSMutableArray* channelsList = [Utility GetCustomizedChannel];
     
     for (ChannelItem* item in channelsList) {
-        if (item.title == name) {
+        if ([item.title isEqualToString:name]) {
             item.lastUpdateDate = [Utility GetCurrentDate];
             isFound = true;
             break;
         }
-        
-        if (!isFound) {
-            ChannelItem* newItem = [ChannelItem new];
-            newItem.title = name;
-            newItem.lastUpdateDate = [Utility GetCurrentDate];
-            [channelsList addObject:newItem];
-        }
-        
-        [Utility SetCachedChannelList:channelsList];
     }
-    return;
+    
+    if (!isFound) {
+        ChannelItem* newItem = [ChannelItem new];
+        newItem.title = name;
+        newItem.lastUpdateDate = [Utility GetCurrentDate];
+        
+        [channelsList addObject:newItem];
+    }
+    
+    [Utility SetCachedChannelList:channelsList];
 }
 
 //Restore back current news list into cache
 + (void) SetCachedNewsList: (NSString*) channelName
                    list:(NSMutableArray*) list{
-    NSMutableArray* myEncodedArray= [NSMutableArray new];
-    for (CNewsInfo* item in list) {
-        NSData* data = [NSKeyedArchiver archivedDataWithRootObject: item];
-        [myEncodedArray addObject:data];
-    }
+    [Utility RemoveCacheFromName:channelName];
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setObject:[myEncodedArray copy] forKey:channelName];
+    NSData* myData = [NSKeyedArchiver archivedDataWithRootObject: [list copy]];
+    [defaults setObject: myData forKey:channelName];
     [defaults synchronize];
-    
-    return;
 }
 
 + (void) SetCachedChannelList:(NSMutableArray*) list{
-    NSMutableArray* myEncodedArray= [NSMutableArray new];
-    for (ChannelItem* item in list) {
-        NSData* data = [NSKeyedArchiver archivedDataWithRootObject: item];
-        [myEncodedArray addObject:data];
-    }
+    [Utility RemoveCacheFromName:ChannelsListCacheKey];
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setObject:[myEncodedArray copy] forKey:ChannelsListCacheKey];
+    [defaults setObject: [NSKeyedArchiver archivedDataWithRootObject:[list copy]] forKey:ChannelsListCacheKey];
     [defaults synchronize];
-    
-    return;
+}
+
++ (void) ClearAllCache{
+    NSString* appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+}
+
++ (void) RemoveCacheFromName: (NSString*) cacheName{
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:cacheName];
+        [[NSUserDefaults standardUserDefaults] synchronize];
 }
 @end

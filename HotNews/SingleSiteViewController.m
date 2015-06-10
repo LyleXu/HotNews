@@ -13,15 +13,14 @@
 
 -(NSMutableArray*)sectionData
 {
+//    [Utility ClearAllCache];
+    
     NSString* channelTitle = self.currentChannel.title;
     NSDate* currentDate = [Utility GetCurrentDate];
     _sectionData = [Utility GetCachedNewsListByChanelName:channelTitle];
     
-    NSDate* latestUpdateDate = [Utility GetLastUpdateDateFromChannelName: channelTitle];
     if(_sectionData == nil || [Utility IsNewsListOutdate:channelTitle])
     {
-        NSLog(self.currentChannel.link);
-        
         _sectionData =  [DataLayer GetNewsByChannel:self.currentChannel.title timestamp:currentDate];
         
         [Utility SetCachedNewsList:channelTitle list:_sectionData];
