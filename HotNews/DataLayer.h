@@ -21,4 +21,5 @@
                             count:(NSString*)count;
 
 +(NSString*)GetRssContentByTitle:(NSString*)title;
++(void) AddChannel: (NSString*) channelTitle channelURL:(NSString*)channelURL;
 @end

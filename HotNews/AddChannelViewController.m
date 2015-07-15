@@ -38,14 +38,15 @@
     c.link = self.txtChannelUrl.text;
     c.lastUpdateDate = nil;
     
-    if ([Utility IsAlreadyExist: c.title]) {
-        NSString* warningMSG = [NSString stringWithFormat:@"The channel [%@] is already exist!", c.title];
-        UIAlertView *alertWarning = [[UIAlertView alloc] initWithTitle:@"" message: warningMSG delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertWarning show];
-        return;
-    }
-    
-    [self AddChannelIntoMemory: c ];
+//    if ([Utility IsAlreadyExist: c.title]) {
+//        NSString* warningMSG = [NSString stringWithFormat:@"The channel [%@] is already exist!", c.title];
+//        UIAlertView *alertWarning = [[UIAlertView alloc] initWithTitle:@"" message: warningMSG delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        [alertWarning show];
+//        return;
+//    }
+//    
+//    [self AddChannelIntoMemory: c ];
+    [DataLayer AddChannel:c.title channelURL:c.link];
     
     NSString* msg = [NSString stringWithFormat:@"Add [%@] successfully!", self.txtChannelName.text];
     UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

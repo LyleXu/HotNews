@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Utility.h"
+#import "DataLayer.h"
 
 @interface AddChannelViewController : UIViewController
 

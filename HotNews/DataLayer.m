@@ -106,4 +106,9 @@
     return rssContent;
 }
 
++(void) AddChannel: (NSString*) channelTitle channelURL:(NSString*)channelURL
+{
+    NSArray* parameters = [NSArray arrayWithObjects: channelTitle, channelURL, nil];
+    NSDictionary* result = [self FetchData:@"ChannelService" methodName:@"AddChannel" parameters:parameters];
+}
 @end
