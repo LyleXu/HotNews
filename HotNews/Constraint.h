@@ -17,4 +17,6 @@
 #define SecondsIntervalLimited 60*30;
 #define ChannelsListCacheKey @"ChannelsList"
 
+
+#define UMengAppKey @"5549cfc567e58e90bc0049ff"
 #endif

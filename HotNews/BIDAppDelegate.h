@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import  "WeiboSDK-Prefix.pch"
-@interface BIDAppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate>
+@interface BIDAppDelegate : UIResponder <UIApplicationDelegate>
 {
-    NSString* wbtoken;
 }
-@property (strong, nonatomic) NSString *wbtoken;
-@property (strong, nonatomic) NSString *wb_uid;
 
 @property (strong, nonatomic) UIWindow *window;
 

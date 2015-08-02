@@ -109,6 +109,21 @@
 +(void) AddChannel: (NSString*) channelTitle channelURL:(NSString*)channelURL
 {
     NSArray* parameters = [NSArray arrayWithObjects: channelTitle, channelURL, nil];
-    NSDictionary* result = [self FetchData:@"ChannelService" methodName:@"AddChannel" parameters:parameters];
+    [self FetchData:@"ChannelService" methodName:@"AddChannel" parameters:parameters];
 }
+
++(NSDictionary*)Login:(NSString*)phone pwd:(NSString*)password
+{
+    NSArray* parameters = [NSArray arrayWithObjects: phone, password, nil];
+    NSDictionary* result = [self FetchData:@"UserService" methodName:@"Login" parameters:parameters];
+    return result;
+}
+
++(NSDictionary*)LoginFromThirdParty:(NSString*)ty tokenFromThirdParty:(NSString*)ac
+{
+    NSArray* parameters = [NSArray arrayWithObjects: ty, ac, nil];
+    NSDictionary* result = [self FetchData:@"UserService" methodName:@"LoginFromThirdParty" parameters:parameters];
+    return result;
+}
+
 @end

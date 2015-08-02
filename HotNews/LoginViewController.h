@@ -1,13 +1,33 @@
 //
 //  LoginViewController.h
-//  HotNews
+//  QQDemo
 //
-//  Created by gtcc on 12/11/14.
-//  Copyright (c) 2014 xc. All rights reserved.
+//  Created by DotHide on 11-8-3.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "WeiboSDK-Prefix.pch"
-@interface LoginViewController : UIViewController<WBHttpRequestDelegate>
+@interface LoginViewController : UIViewController <UITableViewDataSource, UITextFieldDelegate> {
+	IBOutlet UITableView *loginTableView;
+	UIButton *btnLogin;
+	
+    UILabel *lblCountryPhoneCode;
+	UITextField *txtUser;
+	UITextField *txtPass;
+    
+	NSArray *dataArray;
+    NSMutableArray* _permissions;
+}
+
+@property (nonatomic, retain) IBOutlet UITableView *loginTableView;
+
+@property (nonatomic, retain) IBOutlet UIButton *btnLogin;
+@property (nonatomic, retain) UITextField *txtUser;
+@property (nonatomic, retain) UITextField *txtPass;
+@property (nonatomic, retain) NSArray *dataArray;
+@property (weak, nonatomic) IBOutlet UIImageView *imageWeibo;
+@property (weak, nonatomic) IBOutlet UIImageView *imageQQ;
+@property (weak, nonatomic) IBOutlet UIImageView *imageWeiXin;
 
 @end
+

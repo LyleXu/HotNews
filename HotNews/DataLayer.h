@@ -22,4 +22,7 @@
 
 +(NSString*)GetRssContentByTitle:(NSString*)title;
 +(void) AddChannel: (NSString*) channelTitle channelURL:(NSString*)channelURL;
+
++(NSDictionary*)Login:(NSString*)phone pwd:(NSString*)password;
++(NSMutableDictionary*)LoginFromThirdParty:(NSString*)ty tokenFromThirdParty:(NSString*)ac;
 @end
